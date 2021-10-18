@@ -1,11 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<img src="https://blog.curso-r.com/images/posts/conteudo/fluxo-scraping/cycle.png" title="Fluxo do Web Scraping." alt="Fluxo do Web Scraping." width="70%" style="display: block; margin: auto;" />
+
 ## Informações importantes
 
 -   [Clique
     aqui](https://github.com/curso-r/main-web-scraping/raw/master/material_do_curso.zip)
     para baixar o material do curso.
+
+-   Pacote necessário: `{tidyverse}`. Vamos instalar outros durante as
+    aulas.
 
 -   Nosso blog: <https://curso-r.com/blog/>
 

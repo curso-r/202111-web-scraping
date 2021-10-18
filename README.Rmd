@@ -21,6 +21,10 @@ knitr::opts_chunk$set(
 library(magrittr)
 ```
 
+```{r ws, fig.cap="Fluxo do Web Scraping.", out.width="70%", echo=FALSE, dpi = 300, fig.align="center"}
+knitr::include_graphics("https://blog.curso-r.com/images/posts/conteudo/fluxo-scraping/cycle.png")
+```
+
 ## Informações importantes
 
 ```{r results='asis'}
@@ -28,6 +32,9 @@ if(params$download_material == TRUE){
  glue::glue("- [Clique aqui](https://github.com/curso-r/{params$main_repo}/raw/master/material_do_curso.zip) para baixar o material do curso.")
   }
 ```
+
+- Pacote necessário: `{tidyverse}`. Vamos instalar outros durante as aulas.
+
 
 - Nosso blog: [https://curso-r.com/blog/](https://curso-r.com/blog/)
 
