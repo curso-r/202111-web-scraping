@@ -53,13 +53,17 @@ Fora do horário de aula ou monitoria:
 
 ```{r}
 paths <- CursoRutils:::list_github_files(params$main_repo, "slides/", "[0-9]-.*html$")
+paths_pdf <- CursoRutils:::list_github_files(params$main_repo, "slides/", "[0-9]-.*pdf$")
 tibble::tibble(
   slide = paths,
   link = paste0("https://curso-r.github.io/", params$main_repo, "/", slide),
-    slides = glue::glue("[{slide}]({link})")
+  slides = glue::glue("[{basename(slide)}]({link})"),
+  slide_pdf = paths_pdf,
+  link_pdf = paste0("https://curso-r.github.io/", params$main_repo, "/", slide_pdf),
+  pdf = glue::glue("[{basename(slide_pdf)}]({link_pdf})")
 ) %>% 
   dplyr::filter(!stringr::str_detect(slide, "_files/")) %>%
-    dplyr::select(slides) %>% 
+  dplyr::select(slides, pdf) %>% 
   knitr::kable()
 ```
 
