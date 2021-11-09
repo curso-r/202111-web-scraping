@@ -52,6 +52,8 @@ Fora do horário de aula ou monitoria:
 |:--------------------------------------------------------------------------------------------|
 | [01-pokemon.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/01-pokemon.R) |
 | [02-sabesp.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/02-sabesp.R)   |
+| [03-sptrans.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/03-sptrans.R) |
+| [04-twitter.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/04-twitter.R) |
 
 ## Lição de casa
 
