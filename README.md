@@ -1,14 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<div class="figure" style="text-align: center">
-
-<img src="https://blog.curso-r.com/images/posts/conteudo/fluxo-scraping/cycle.png" alt="Fluxo do Web Scraping." width="70%" />
-<p class="caption">
-Fluxo do Web Scraping.
-</p>
-
-</div>
+<img src="https://blog.curso-r.com/images/posts/conteudo/fluxo-scraping/cycle.png" title="Fluxo do Web Scraping." alt="Fluxo do Web Scraping." width="70%" style="display: block; margin: auto;" />
 
 ## Informações importantes
 
@@ -56,6 +49,7 @@ Fora do horário de aula ou monitoria:
 | [03-sptrans.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/03-sptrans.R)         |
 | [04-twitter.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/04-twitter.R)         |
 | [05-covid.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/05-covid.R)             |
+| [07-tjsp.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/07-tjsp.R)               |
 
 ## Lição de casa
 
