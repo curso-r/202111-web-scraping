@@ -1,0 +1,6500 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<html>
+	
+
+
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<script>
+	window.saj = window.saj || {};
+	window.saj.env = window.saj.env || {};
+	window.saj.env.root = '/cjpg';
+	window.saj.env.css = '/cjpg/css';
+	window.saj.env.js = '/cjpg/js';
+	window.saj.env.imagens = '/cjpg/imagens';
+</script>
+ 	
+ 	<script type="text/Javascript" src="/cjpg/js/jquery/jquery-1.3.2.js"></script>
+ 	<script type="text/Javascript" src="/cjpg/js/jquery/jquery.blockUI.js"></script>
+ 	<script type="text/JavaScript" src="/cjpg/js/spw/spwConcatenado-4.3.3-14.js"></script>
+	<script type="text/JavaScript" src="/cjpg/js/saj/saj-popup.js"></script>
+	
+	<!-- 
+	<script type="text/JavaScript" src="/cjpg/js/saj/saj-tooltip.js"></script>
+	 -->  
+	<script type="text/JavaScript" src="/cjpg/js/toolTipSaj.js"></script>
+	
+	
+ 	<link rel="stylesheet" type="text/css" href="/cjpg/css/spw/spwConcatenado-4.3.3-14.css" />
+	<link rel="stylesheet" type="text/css" href="/cjpg/css/toolTipSaj.css" />
+	<link rel="stylesheet" type="text/css" href="/cjpg/css/saj/saj-popup-modal.css" />
+	 	
+	<title>Consulta de Julgados do Primeiro Grau</title>
+
+	
+		<link rel="stylesheet" type="text/css" href="/cjpg/css/cjpg.css" />
+		<link rel="stylesheet" type="text/css" href="/cjpg/css/saj/saj-tree.css" />
+		<script type="text/JavaScript" src="/cjpg/js/saj/saj-popup.js"></script>
+		<script type="text/JavaScript" src="/cjpg/js/saj/saj-tree-2.2.43-2.js"></script>
+		<script type="text/JavaScript" src="/cjpg/js/saj/saj-web-2.2.41-4.js"></script>
+		<script type="text/JavaScript" src="/cjpg/js/saj/saj-numeroProcesso.js"></script>
+		<script type="text/JavaScript" src="/cjpg/js/saj/saj-mascara-input.js"></script>
+		<script type="text/JavaScript" src="/cjpg/js/saj/saj-browser.js"></script>
+		<script type="text/JavaScript" src="/cjpg/js/saj/saj-popup-modal-1.0.0-1.js"></script>
+		
+		<script type="text/javascript" src="/cjpg/jsp/consulta.js" ></script>
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="expires" content="0"/>
+
+<link href="https://esaj.tjsp.jus.br/esaj/tema/padrao/css/esajComum.css" rel="stylesheet" type="text/css" />
+<link href="https://esaj.tjsp.jus.br/esaj/tema/padrao/css/esajLayout.css" rel="stylesheet" type="text/css" />
+<link href="https://esaj.tjsp.jus.br/esaj/tema/padrao/clientes/SP/css/esajLayoutSP.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+<!--
+/* botao default means o mais claro, que seria o "botï¿½o principal" */
+.spwBotaoDefault, .spwBotaoDefault-o {
+	background-image: url(https://esaj.tjsp.jus.br/esaj/tema/padrao/clientes/SP/imagens/layout/fundoBotaoDefault.gif);
+}
+/* o botao secundario, menos provavel de ser clicado, mais escuro */
+.spwBotao, .spwBotao-o {
+	background-image: url(https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/fundoBotao.gif);
+}
+-->
+</style>
+
+
+<script language="javascript" type="text/JavaScript" src="https://esaj.tjsp.jus.br/esaj/tema/padrao/js/menu.js?n=2553626853"></script>
+
+<link rel="shortcut icon" href="https://esaj.tjsp.jus.br/esaj/tema/padrao/clientes/SP/imagens/favicon.ico" type="image/x-icon" />
+
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-23111004-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+
+
+<script>
+    var dict = {
+        'certificado.tituloCertificadoDigital': 'Certificado digital',
+        'certificado.msgCarregandoCertificado': 'Carregando certificados...',
+        'certificado.msgNenhumCertificadoEncontrado': 'Nenhum certificado encontrado',
+        'certificado.msgErroCarregarCertificado': 'Erro ao carregar certificados',
+        'certificado.msgCertificadoExpirado': '[Expirado]',
+        'certificado.msgCertificadoNaoValido': '[Ainda não válido]',
+        'certificado.msgCertificadoNaoIcpBrasil': '[Não ICP-Brasil]',
+        'certificado.tituloProblemasAoAssinar': 'Falha de comunicação com o dispositivo de assinatura digital',
+
+        'label.contato': 'Contato',
+        'label.identificarSe': 'Identificar-se ',
+
+        'mensagem.aguarde': 'Por favor, aguarde.',
+        'mensagem.paginaNaoCarregada': 'Não foi possível carregar a página.',
+        'mensagem.marcarLido': 'Marcar como lido',
+        'mensagem.registrosSelecionados': 'Registros selecionados',
+        'mensagem.registroJaSelecionado': 'Este registro já está selecionado',
+
+        'mensagem.data.invalida': 'A data digitada é inválida.',
+        'mensagem.data.anoInvalido': 'O ano informado deve ser maior que',
+        'mensagem.data.mesInvalido': 'O mês não pode ser maior que 12.',
+        'mensagem.data.mes': 'O mês',
+        'mensagem.data.mesMaior29dias': 'não pode ter mais que 29 dias.',
+        'mensagem.data.mesMaior28dias': 'não pode ter mais que 28 dias.',
+        'mensagem.data.mesMaior31dias': 'não pode ter mais que 31 dias.',
+        'mensagem.data.mesMaior30dias': 'não pode ter mais que 30 dias.',
+
+        'mensagem.email.invalido': 'O formato do endereço de e-mail não é válido. Verifique se ele tem o formato "usuario@dominio".',
+        'mensagem.email.caracteresInvalidos': 'O endereço de e-mail possui caracteres inválidos',
+        'mensagem.email.usuarioInvalido': 'O formato do usuário informado no endereço de e-mail não é válido.',
+        'mensagem.email.ipInvalido': 'O endereço IP informado no endereço de e-mail não é válido.',
+        'mensagem.email.dominioInvalido': 'O formato do domínio informado no endereço de e-mail não é válido.',
+        'mensagem.email.dominioIncompleto': 'O domínio informado no endereço de e-mail deve possuir pelo menos duas partes. Por exemplo: "usuario@empresa.com.br".',
+
+        'mensagem.texto.tamanhoInvalido': 'O tamanho do texto digitado é maior do que o tamanho permitido. Tamanho permitido:',
+        'mensagem.texto.caracter': 'O caracter',
+        'mensagem.texto.caracterPosicaoInvalida': 'não está permitido na posição',
+
+        'mensagem.numero.numeroInvalido': 'O valor digitado não é um número válido.',
+        'mensagem.numero.numeroNaoPodeCasasDecimais': 'O número não pode conter casas decimais',
+        'mensagem.numero.numeroCasaDecimaisInvalidas': 'O número de casas decimais é inválido. O número pode conter apenas',
+        'mensagem.numero.casaDecimais': 'casas decimais',
+        'mensagem.numero.numeroInteiroInvalido': 'O número de dígitos inteiros é inválido. O número pode conter apenas',
+        'mensagem.numero.digitosInteiros': 'dígitos inteiros',
+        'mensagem.numero.numeroTamanhoInvalido': 'O número digitado não pode ser maior que',
+        'mensagem.numero.numeroZeroInvalido': 'O número digitado deve ser diferente de zero.'
+    }
+</script>
+
+
+	
+
+
+  
+
+</head>
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" class="esajTabelaCabecalhoCliente" summary=" ">
+	<tr>
+		<td><a href="http://www.tjsp.jus.br"><img src="https://esaj.tjsp.jus.br/esaj/tema/padrao/clientes/SP/imagens/layout/cabecalhoLogo.jpg" width="425" height="58" alt="Tribunal de Justi&ccedil;a do Estado de S&atilde;o Paulo" /></a></td>
+		<td align="right" valign="top"><img src="https://esaj.tjsp.jus.br/esaj/tema/padrao/clientes/SP/imagens/layout/cabecalhoImagem.jpg" width="353" height="58" /></td>
+	</tr>
+</table>
+	
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+
+
+<!-- cabecalho e-Saj -->
+<table width="100%" cellpadding="0" cellspacing="0" class="esajTabelaCabecalhoServico" summary=" ">
+	<tr>
+		<td class="esajCelulaCabecalhoServicoLogo">
+
+
+
+
+<a href="https://esaj.tjsp.jus.br/esaj/redirecionarNovoEsaj.do"><img src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/eSajServico.gif" title="Voltar para página inicial do e-SAJ" alt="Voltar para página inicial do e-SAJ" width="255" height="53" border="0" /></a><img src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/eSajServicoInf.gif" alt=" " width="255" height="28" border="0" />
+</td>
+		<td class="esajCelulaCabecalhoServicoMenu">
+		    <table width="100%" border="0" cellpadding="0" cellspacing="0" summary=" ">
+				<tr>
+					<td align="right">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        <div id="divopupContato" style="display: none;">
+                <div class="quadroContato"><h2>Suporte Técnico de Sistemas</h2>         <div style="text-align: left; padding: 0 20px;">             <p class="locaisContato">Cadastro de Advogados, Peticionamento Eletrônico e Processos de Primeira Instância Sistemas de 1ª Instância, Sistemas de 2ª Instância, Colégio Recursal, Consulta de Acórdão, Decisões Monocráticas, Homologações de Acordo e Jurisprudência  e Sistema Pushing.</p>             <p class="telefonesLocal"> Ligue para  0800 797 9918 (ligações gratuitas para telefones fixos) ou (11) 4199-6366 (para ligações de celulares) ou abra sua solicitação pelo portal <a target="_blank" href="http://www.suportesistemastjsp.com.br/">www.suportesistemastjsp.com.br</a></p>         </div>     </div>
+        </div>
+    
+
+<!-- Devido ao alinhamento inline das imagens, elas nÃ£o podem ter nenhum tipo de espaÃ§amento entre elas, portanto Ã© necessÃ¡rio finalizar a linha iniciando um comentÃ¡rio e fechar o comentÃ¡rio imediatamente antes da abertura da nova tag-->
+<img height="24" width="47" alt=" " src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/inicioMenuSup.jpg"/><a href="https://esaj.tjsp.jus.br/caixapostal"><!--
+
+    --><img height="24" width="83" border="0" alt="Caixa Postal" src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/caixaPostal.gif"/></a><!--
+    --><img height="24" width="4" alt=" " src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/menuSeparador.jpg"/><a href="https://esaj.tjsp.jus.br/esaj/cadastro.do"><!--
+
+--><img src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/cadastro.gif" alt="Cadastro" width="81" height="24" border="0" /></a><!--
+
+    --><img height="24" width="4" alt=" " src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/menuSeparador.jpg"/><a id="linkContato" href="#"><!--
+    --><img height="24" width="68" border="0" alt="Contato" src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/contato.gif"/></a><!--
+
+
+    --><img height="24" width="4" alt=" " src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/menuSeparador.jpg"/><a target="blank" href="https://esaj.tjsp.jus.br/WebHelp/"><!--
+    --><img height="24" width="61" border="0" alt="Ajuda do e-Saj" src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/ajuda.gif"/></a><!--
+
+
+-->
+</td>
+				</tr>
+				<tr>
+					<td class="esajCelulaIdentificacaoServico" >
+
+
+
+
+<style>
+
+    td.esajCelulaIdentificacao, td.esajCelulaIdentificacaoServico {
+        position: relative;
+    }
+
+    button.escolhaBeta {
+        border: 0;
+        background: #0078D7;
+        color: #fff;
+        margin-right: 5px;
+        font-family: verdana;
+        font-size: 12px;
+        height: 27px;
+        line-height: 14px;
+        border-radius: 0;
+        text-shadow: 1px 1px 1px #797979;
+        position: absolute;
+        top: 30px;
+        right: 3px;
+        padding: 7px 12px;
+        cursor: pointer;
+    }
+
+    button.escolhaBeta:hover {
+        background-color: #0b5c9c;
+    }
+</style>
+
+<span id="identificacao"></span>
+
+<button style="display: none" class="escolhaBeta"></button>
+
+
+
+
+    
+    
+        <script language="javascript" type="text/JavaScript" src="https://esaj.tjsp.jus.br/sajcas/conteudoIdentificacao?script=1636614633990"></script>
+    
+
+</td>
+				</tr>
+				<tr>
+					<td class="esajCelulaCabecalhoServicoCaminho" >
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<a href="" class="esajCaminhoLink"></a>
+
+ &gt;
+
+
+<a href="https://esaj.tjsp.jus.br/esaj/portal.do?servico=740000" class="esajCaminhoLink">Bem-vindo</a>
+
+ &gt;
+
+
+
+Consulta de Julgados de 1º Grau
+</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<!-- CONTEUDO -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="esajTabelaTitulo">
+	<tr>
+		<td class="esajCelulaMenuSuspenso">
+		<a href="#" onclick="return showMenuSuspenso()"><img src="https://esaj.tjsp.jus.br/esaj/tema/padrao/imagens/layout/menuSuspenso.gif" alt="Menu de servi&ccedil;os" width="243" height="21" style="display:block" /></a>
+		<div id="layerMenu" style="display:none">
+			
+
+<!-- MENU -->
+<ul id="esajMenuArea">
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Consultas Processuais</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/cpopg/open.do">Consulta de Processos do 1ºGrau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/cposg/open.do">Consulta de Processos do 2ºGrau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/cposgcr/open.do">Colégio Recursal/Turma de Uniformização</a></li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Consulta de Ordem de Processos</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/cop/abrirConsultaDeOrdemDeJulgamentoPg.do">Consulta de processos de Ordem de julgamento do 1º Grau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/cop/abrirConsultaDeOrdemDeAtoPg.do">Consulta de Ordem de Publicação e Cumprimento de Atos</a></li>
+</ul>
+  </li>
+</ul>
+  </li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Solicitação de Conciliação</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petpg-conciliacao/abrirSolicitacaoConciliacaoPreProcessual.do">Solicitação de Conciliação Pré-Processual</a></li>
+</ul>
+  </li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Requisitórios</a>
+<ul>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Portal do Devedor</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/cpopg/abrirConsultaDeRequisitorios.do">Consulta de Requisitórios</a></li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Notificação de Requisitórios</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirConsultaNotificacoesRequisitoriosNaoRecebidas.do">Requisitórios Pendentes de Recebimento</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirConsultaNotificacoesRequisitoriosRecebidas.do">Requisitórios Recebidos</a></li>
+</ul>
+  </li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirConsultaDeProcessos.do">Consulta de Processos</a></li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Notificação de Mapas Orçamentários</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirConsultaNotificacoesMapasOrcamentariosNaoRecebidas.do">Mapas Pendentes de Recebimento</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirConsultaNotificacoesMapasOrcamentariosRecebidas.do">Mapas Recebidos</a></li>
+</ul>
+  </li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirPeticionamentoIntermediario.do">Peticionamento de Intermediária</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirConsultaNotificacoesDocumentos.do">Notificação de Documentos</a></li>
+</ul>
+  </li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirConsultaListaPagamentos.do">Listas de Precatórios Pendentes de Pagamento e Pagamentos Disponibilizados</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/portalDevedor/abrirConsultaListaDepositos.do">Lista de Depósitos Efetuados</a></li>
+</ul>
+  </li>
+  <li class="esajMenuFechado"><a href="https://esaj.tjsp.jus.br/ctoPtl/abrirConsultaContratos.do">Contratos</a></li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Consultas de Jurisprudência</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/cjsg/consultaSimples.do">Consulta Simples</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/cjsg/consultaCompleta.do">Consulta Completa</a></li>
+</ul>
+  </li>
+  <li class="esajMenuFechado"><a href="https://esaj.tjsp.jus.br/cdje">Diário da Justiça Eletrônico</a></li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Biblioteca</a>
+<ul>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Consultas</a>
+<ul>
+  <li class="esajMenuItem"><a href="http://esaj.tjsp.jus.br/gecon/obra/consulta/obras/periodico/artigos">Consulta de Obras, Periódicos e Artigos</a></li>
+  <li class="esajMenuItem"><a href="http://esaj.tjsp.jus.br/gecon/jurisprudencia/consulta">Jurisprudência Selecionada </a></li>
+  <li class="esajMenuItem"><a href="http://esaj.tjsp.jus.br/gecon/legislacao/consulta">Consulta de Legislação e Normas</a></li>
+</ul>
+  </li>
+  <li class="esajMenuItem"><a href="http://esaj.tjsp.jus.br/gecon/boletim/consulta">Boletins</a></li>
+</ul>
+  </li>
+  <li class="esajMenuFechado"><a href="https://esaj.tjsp.jus.br/push">Push</a></li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Certidões</a>
+<ul>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Certidões de 1º Grau</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/sco/abrirCadastro.do">Cadastro de Pedido de Certidão</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/sco/abrirConferencia.do">Conferência de Certidão</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/sco/abrirDownload.do">Visualizar Certidão</a></li>
+</ul>
+  </li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Certidões de 2º Grau</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/scosg/abrirCadastro.do">Cadastro de Pedido de Certidão de 2º Grau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/scosg/abrirConferencia.do">Conferência de Certidão de 2º Grau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/scosg/abrirDownload.do">Download de Certidão de 2º Grau</a></li>
+</ul>
+  </li>
+</ul>
+  </li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Corregedoria</a>
+<ul>
+  <li class="esajMenuItem"><a href="http://esaj.tjsp.jus.br/gecon/publico/parecer/consulta">Consulta de Pareceres e Decisões da Corregedoria</a></li>
+</ul>
+  </li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Conferência de Documento Digital</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/pastadigital/pg/abrirConferenciaDocumento.do">Conferência de Documento Digital do 1ºGrau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/pastadigital/sg/abrirConferenciaDocumento.do">Conferência de Documento Digital do 2ºGrau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/pastadigital/sgcr/abrirConferenciaDocumento.do">Conferência de Documento Digital do Colégio Recursal </a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/atendimento/abrirConferenciaDocOriginal.do">Conferência de Documento Digital de Expediente Administrativo </a></li>
+</ul>
+  </li>
+  <li class="esajMenuFechado"><a href="https://esaj.tjsp.jus.br/cjpg">Consulta de Julgados de 1º Grau</a></li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Peticionamento Eletrônico</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petpg-verificacao/abrirVerificacaoRequisitosPet.do">Verificação de Requisitos</a></li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Peticionamento Eletrônico de 1º Grau</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petpg/abrirNovaPeticaoInicial.do?instancia=PG">Petição Inicial de 1° Grau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petpg/abrirNovaPeticaoIntermediaria.do?instancia=PG">Petição Intermediária de 1° Grau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petpg/abrirConsultaPeticoes.do">Consulta de Petições de 1º Grau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/securitycasapireq/api/cas/authenticate?serviceurl=https://esaj.tjsp.jus.br/petpgreq">Peticionamento de intermediaria de 1º Grau Requisitórios</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petpg-complemento/abrirNovoComplementoProcesso.do">Complemento de Cadastro de 1º Grau</a></li>
+</ul>
+  </li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Peticionamento Eletrônico de 2º Grau</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petsg/abrirNovaPeticaoInicial.do?instancia=SG">Peticionamento Inicial de 2º Grau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petsg/abrirNovaPeticaoIntermediaria.do?instancia=SG">Peticionamento Intermediário de 2º Grau</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petsg/abrirConsultaPeticoes.do">Consulta de Petições de 2º Grau</a></li>
+</ul>
+  </li>
+	<li class="esajMenuFechado"><a href="#" onclick="return esajMenu(this)">Peticionamento Eletrônico do Colégio Recursal</a>
+<ul>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petcr/abrirNovaPeticaoInicial.do?instancia=CR">Peticionamento Inicial - Colégio Recursal</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petcr/abrirNovaPeticaoIntermediaria.do?instancia=CR">Peticionamento Intermediário - Colégio Recursal</a></li>
+  <li class="esajMenuItem"><a href="https://esaj.tjsp.jus.br/petcr/abrirConsultaPeticoes.do">Consulta de Petições - Colégio Recursal</a></li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+
+		</div>
+		</td>
+		<td class="esajCelulaTituloServico"><h1 class="esajTituloPagina">Consulta de Julgados de 1º Grau</h1></td>
+	</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" summary=" ">
+	<tr>
+		<td class="esajCelulaConteudoServico" >
+		
+	
+
+
+  
+ 
+
+
+	
+		
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+<span class="esajTituloOrientacoes">Orientações</span>
+<ul class="esajUlOrientacoes" id="">
+	
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<li>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+Para detalhes sobre cada campo de busca, selecione o campo específico
+
+
+		
+	</li>
+
+
+
+			
+</ul>
+
+<br>
+
+
+		
+			
+			
+
+
+
+
+
+
+
+
+
+<form name="consultaDecisaoForm" method="" action="/cjpg/pesquisar.do" autocomplete="off" enctype="" onsubmit="return applySubmit(this, eval('function spwSubmit(t, e){decodificaInputMulSelOnSubmit();if (!IS_enableSubmit) return false; return BENV_isCamposValidos(t); } spwSubmit(this, event);'));" id="" target="">
+	<input type="hidden" name="conversationId" value="">
+
+			
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+<script type="text/javascript">
+	(function($){
+		$(function() {
+			var saj = $.saj;
+			var id = 'id';
+			if ('' !== '' && !false) {
+				var idObjetoReferencia = '#' + id;
+				$(idObjetoReferencia).registrarTooltip({
+					conteudoTooltip: '',
+					posicaoTooltip: 'direita',
+					objReferenciaPosicaoTooltip:$(idObjetoReferencia)
+				});
+			} 
+		});		
+	})(jQuery);
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+		
+			
+		
+		
+	
+	
+	<div class="">
+		
+			<br/>
+			
+						
+				
+				
+					
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="top">
+	   <td height="21" valign="top" nowrap background="/cjpg/imagens/spw/fundo_subtitulo.gif" class="subtitle"> Parâmetros de Consulta </td>
+    <td background="/cjpg/imagens/spw/fundo_subtitulo2.gif" width="90%">
+      <img src="/cjpg/imagens/spw/final_subtitulo.gif" width="16" height="20"></td>
+  </tr>
+</table>
+				
+			
+			<br/>
+		
+		<table id="" class="secaoFormBody" width="100%" cellpadding="2" cellspacing="0" border="0">
+				
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="top">
+			
+			  
+		  	  
+				
+				<label for="buscaInteiroTeor" class="" style="float:left;font-weight:bold;margin-top:3px;">Pesquisa Livre</label><div style="text-align:right;font-weight:bold;margin-top:3px;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="top">
+		  
+		
+			
+	
+	
+	
+	
+	
+	<table cellpadding="0" cellspacing="0" border="0" width="">
+		<tr>
+			<td>
+				
+				
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+<script type="text/javascript">
+	(function($){
+		$(function() {
+			var saj = $.saj;
+			var id = 'iddadosConsulta.pesquisaLivre';
+			if ('' !== '' && !false) {
+				var idObjetoReferencia = '#' + id;
+				$(idObjetoReferencia).registrarTooltip({
+					conteudoTooltip: '',
+					posicaoTooltip: 'direita',
+					objReferenciaPosicaoTooltip:$(idObjetoReferencia)
+				});
+			} 
+		});		
+	})(jQuery);
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		<span id="">
+		
+	
+	
+	<input type="text" name="dadosConsulta.pesquisaLivre" size="100" value="league of legends" formatType="TEXT" formato="120" obrigatorio="" rotulo="Pesquisa Livre" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" style="" class="spwCampoTexto " id="iddadosConsulta.pesquisaLivre" title="" alt="">
+		
+	
+	
+	
+		
+	    
+    
+	
+	
+	
+		
+	
+	
+	
+	
+		</span>
+	
+
+
+
+
+
+		
+						<div class="botoesOperadores" style="margin-top: 1px;">
+							<input class="botaoOperadores" type="button" value=" E " name="E" />
+							<input class="botaoOperadores" type="button" value=" OU " name="OU" />
+							<input class="botaoOperadores" type="button" value=" N&Atilde;O " name="NAO" />
+							<input class="botaoOperadores" type="button" value=" ? " name="INT"/>
+							<input class="botaoOperadores" type="button" value=" * " name="AST" />
+							<input class="botaoOperadores" type="button" value='"&nbsp;&nbsp;"' name="ASP" />
+							&nbsp;&nbsp;&nbsp;
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="checkBoxSinonimos">
+
+	
+		<input type="checkbox" name="dadosConsulta.sinonimos" value="true" style="vertical-align:middle;"> 
+	
+	
+
+Pesquisar por sinônimos
+</span>
+
+
+							&nbsp;&nbsp;&nbsp;
+						</div>
+					
+				
+			</td>
+		</tr>
+	  </table>
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+					
+				
+		</table>
+	</div>
+	
+	
+	
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+		
+			
+		
+		
+	
+	
+	<div class="">
+		
+		<table id="" class="secaoFormBody" width="100%" cellpadding="2" cellspacing="0" border="0">
+				
+					
+					
+					
+						
+					    	
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+		
+	
+	 
+		
+	
+	
+	
+	
+		
+	
+	
+	
+	
+		<script>$.saj.numeroProcesso.desabilitarNumeroOculto = false;</script>
+	
+
+	
+		
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="">
+			
+			  
+		  	  
+				
+				<label for="radioNumeroUnificado" class="" style="float:left;font-weight:bold;">Tipo do número</label><div style="text-align:right;font-weight:bold;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="">
+		  
+		
+			
+	
+	
+	
+	
+	
+	<table cellpadding="0" cellspacing="0" border="0" width="">
+		<tr>
+			<td>
+				
+				
+			   <input type="radio" name="tipoNumero" value="UNIFICADO" checked="checked" id="radioNumeroUnificado"><label for="radioNumeroUnificado">Número do processo</label>
+			   <input type="radio" name="tipoNumero" value="SAJ" id="radioNumeroAntigo"><label for="radioNumeroAntigo">Outros</label>
+			
+				
+			</td>
+		</tr>
+	  </table>
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="">
+			
+			  
+		  	  
+				
+				<label for="" class="" style="float:left;font-weight:bold;">Número do processo</label><div style="text-align:right;font-weight:bold;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="">
+		  
+		
+			
+	
+	
+	
+	
+	
+	<table cellpadding="0" cellspacing="0" border="0" width="">
+		<tr>
+			<td>
+				
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		<span id="linhaProcessoUnificado">
+		
+	
+	
+	
+
+
+
+
+
+
+
+
+	
+
+
+	
+	
+	
+	
+	
+	
+
+
+	
+ 
+<input type="text" name="numeroDigitoAnoUnificado" maxlength="25" size="20" value="" formatType="TEXT" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" id="numeroDigitoAnoUnificado">
+<input type="text" id="JTRNumeroUnificado" size="3" disabled="disabled" value="826"/>
+<input type="text" name="foroNumeroUnificado" maxlength="4" size="3" value="" formatType="TEXT" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" id="foroNumeroUnificado">
+<input type="hidden" name="dadosConsulta.nuProcesso" value="" id="nuProcessoUnificadoFormatado">
+
+
+<script>
+	(function($){
+		$(function() {
+			var saj = $.saj;
+			var mascaraNumeroUnificado = saj.mascaraNumeroUnificado;
+			var $campoNumeroDigitoAnoUnificado = $('input#numeroDigitoAnoUnificado');
+			var $campoForoNumeroUnificado = $('input#foroNumeroUnificado');
+			var $campoJTRNumeroUnificado = $('input#JTRNumeroUnificado');
+			saj.configurarMascaraInput($campoForoNumeroUnificado, '0000');
+			saj.configurarMascaraInput($campoNumeroDigitoAnoUnificado, mascaraNumeroUnificado, $campoForoNumeroUnificado,{
+				afterPaste: afterPaste			
+			});
+			saj.bindCamposNumeroProcesso();
+								
+		});		
+		
+		var afterPaste = function(textoOriginal) {
+			var texto = getDigits(textoOriginal);
+			if (!texto || texto.length < 16) {
+				return;
+			}
+			
+			var jtr = $('#JTRNumeroUnificado').val();
+			jtr = getDigits(jtr);
+			var jtrDigitado = texto.substring(13,16);
+			var foroUnificado;
+			//pega os 4 ultimos digitos, e caso o jtr colado for o mesmo, coloca os 4 no campo de foro unificado
+			//se o jtr for diferente nao coloca nada no campo de foro unificado
+			if (jtr == jtrDigitado) {
+				foroUnificado = texto.substring(16,texto.length);
+			} else {
+				foroUnificado = '';
+			}
+			
+			var numeroDigitoAno = texto.substring(0,13);
+			var $numeroDigitoAno = $('input#numeroDigitoAnoUnificado');
+			$numeroDigitoAno.val(numeroDigitoAno);
+			
+			var $foroNumeroUnificado = $('#foroNumeroUnificado');
+			$foroNumeroUnificado.val(foroUnificado);
+			$foroNumeroUnificado.trigger('blur');	
+			$foroNumeroUnificado.focus();
+		};
+		
+		var getDigits = function(texto) {
+			return texto.replace(/[^0-9]/g, '');
+		};
+		
+	})(jQuery);
+	
+</script>
+
+	
+	
+	
+	    
+    
+	
+	
+		
+	
+	
+	
+	
+		</span>
+	
+
+
+
+				
+					
+					
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+<script type="text/javascript">
+	(function($){
+		$(function() {
+			var saj = $.saj;
+			var id = 'nuProcessoAntigoFormatado';
+			if ('' !== '' && !false) {
+				var idObjetoReferencia = '#' + id;
+				$(idObjetoReferencia).registrarTooltip({
+					conteudoTooltip: '',
+					posicaoTooltip: 'direita',
+					objReferenciaPosicaoTooltip:$(idObjetoReferencia)
+				});
+			} 
+		});		
+	})(jQuery);
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		<span id="linhaProcessoAntigo">
+		
+	
+	
+	<input type="text" name="dadosConsulta.nuProcessoAntigo" size="" value="" formatType="TEXT" formato="25" obrigatorio="" rotulo="" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" disabled="disabled" style="" class="spwCampoTexto disabled " id="nuProcessoAntigoFormatado" title="" alt="">
+		
+	
+	
+	
+		
+	    
+    
+	
+	
+	
+		
+	
+	
+	
+	
+		</span>
+	
+
+
+
+
+
+					
+				
+				
+					    		<span id="msgStatusProcesso" class="esajKeyMsgErro" style="padding-left: 5px;" >&nbsp;</span>
+					    	
+			
+				
+			</td>
+		</tr>
+	  </table>
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+		
+	
+
+					    
+					    
+					
+					
+					
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="">
+			
+			  
+		  	  
+				
+				<label for="classe_selectionText" class="" style="float:left;font-weight:bold;">Classe</label><div style="text-align:right;font-weight:bold;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="">
+		  
+		
+			
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table id="treeSelectClasse" cellspacing="0" cellpadding="0" width="515" class="treeSelect">
+	<tr>
+		<td width="*">
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td>
+						<input type="hidden" name="classeTreeSelection.values" value="" id="classe">
+						<span id="classe_action" value="/cjpg/classeTreeSelect.do" />
+						
+						<input type="text" name="classeTreeSelection.text" value="" formatType="TEXT" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" onchange="$.saj.tree.onTextPropertyChangeEvent({data:{ campoId: 'classe', 
+								treeSelectId: 'treeSelectClasse',
+								url: '/cjpg/classeTreeSelect.do', 
+								processandoImgUrl: '/cjpg/imagens/spw/processandoNovo.gif', 
+								width: 600,
+								expectedHeight: 400, 
+								reload: 'false' }});" style="width:100%;" id="classe_selectionText">
+					     
+					</td>
+					<td align="center" width="20">
+						<img id="botaoProcurar_classe"
+						src="/cjpg/imagens/spw/botProcurar.gif" class="treeSelect_botaoHabilitado" height="17" border="0" width="16" title="Abre a consulta" style="cursor: pointer; margin-left: 8px;" onmouseout="IH_mOut(this)" onmouseover="IH_mOver(this)" /><img
+						src="/cjpg/imagens/spw/botProcurar-d.gif" class="treeSelect_botaoDesabilitado" height="17" border="0" width="16" style="display:none; margin-left: 8px;" />
+					</td>
+				</tr>
+			</table>
+        </td>
+		<td width="16" valign="middle">
+			<img id="botaoLimpar_classe" 
+			src="/cjpg/imagens/spw/botLimpar.gif" class="treeSelect_botaoHabilitado" height="17" width="16" border="0" title="Limpa campo" onmouseout="IH_mOut(this)" onmouseover="IH_mOver(this)" /><img
+			src="/cjpg/imagens/spw/botLimpar-d.gif" class="treeSelect_botaoDesabilitado" height="17" width="16" border="0" style="display:none" />
+		</td>
+    </tr>
+</table>
+<script>
+	(function($) {
+				
+		var bindTreeSelect = function() {
+			var options = {
+				campoId: 'classe',
+				treeSelectId: 'treeSelectClasse',
+				url: '/cjpg/classeTreeSelect.do',
+				processandoImgUrl: '/cjpg/imagens/spw/processandoNovo.gif',
+				width: 600,
+				expectedHeight: 400,
+				reload: 'false',
+				mostrarBotoesSelecaoRapida: true
+			};
+
+			$.saj.tree.updateSelectionText(options);
+			
+			$('#botaoProcurar_classe').bind('click', options, $.saj.tree.onPopupEvent);
+			$('#botaoLimpar_classe').bind('click', options, $.saj.tree.onClearSelection);
+			
+			
+		};
+
+		bindTreeSelect();
+
+		
+		
+	})(jQuery);
+</script>
+	
+
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+										
+					
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="">
+			
+			  
+		  	  
+				
+				<label for="assunto_selectionText" class="" style="float:left;font-weight:bold;">Assunto</label><div style="text-align:right;font-weight:bold;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="">
+		  
+		
+			
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table id="treeSelectAssunto" cellspacing="0" cellpadding="0" width="515" class="treeSelect">
+	<tr>
+		<td width="*">
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td>
+						<input type="hidden" name="assuntoTreeSelection.values" value="" id="assunto">
+						<span id="assunto_action" value="/cjpg/assuntoTreeSelect.do" />
+						
+						<input type="text" name="assuntoTreeSelection.text" value="" formatType="TEXT" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" onchange="$.saj.tree.onTextPropertyChangeEvent({data:{ campoId: 'assunto', 
+								treeSelectId: 'treeSelectAssunto',
+								url: '/cjpg/assuntoTreeSelect.do', 
+								processandoImgUrl: '/cjpg/imagens/spw/processandoNovo.gif', 
+								width: 600,
+								expectedHeight: 400, 
+								reload: 'false' }});" style="width:100%;" id="assunto_selectionText">
+					     
+					</td>
+					<td align="center" width="20">
+						<img id="botaoProcurar_assunto"
+						src="/cjpg/imagens/spw/botProcurar.gif" class="treeSelect_botaoHabilitado" height="17" border="0" width="16" title="Abre a consulta" style="cursor: pointer; margin-left: 8px;" onmouseout="IH_mOut(this)" onmouseover="IH_mOver(this)" /><img
+						src="/cjpg/imagens/spw/botProcurar-d.gif" class="treeSelect_botaoDesabilitado" height="17" border="0" width="16" style="display:none; margin-left: 8px;" />
+					</td>
+				</tr>
+			</table>
+        </td>
+		<td width="16" valign="middle">
+			<img id="botaoLimpar_assunto" 
+			src="/cjpg/imagens/spw/botLimpar.gif" class="treeSelect_botaoHabilitado" height="17" width="16" border="0" title="Limpa campo" onmouseout="IH_mOut(this)" onmouseover="IH_mOver(this)" /><img
+			src="/cjpg/imagens/spw/botLimpar-d.gif" class="treeSelect_botaoDesabilitado" height="17" width="16" border="0" style="display:none" />
+		</td>
+    </tr>
+</table>
+<script>
+	(function($) {
+				
+		var bindTreeSelect = function() {
+			var options = {
+				campoId: 'assunto',
+				treeSelectId: 'treeSelectAssunto',
+				url: '/cjpg/assuntoTreeSelect.do',
+				processandoImgUrl: '/cjpg/imagens/spw/processandoNovo.gif',
+				width: 600,
+				expectedHeight: 400,
+				reload: 'false',
+				mostrarBotoesSelecaoRapida: true
+			};
+
+			$.saj.tree.updateSelectionText(options);
+			
+			$('#botaoProcurar_assunto').bind('click', options, $.saj.tree.onPopupEvent);
+			$('#botaoLimpar_assunto').bind('click', options, $.saj.tree.onClearSelection);
+			
+			
+		};
+
+		bindTreeSelect();
+
+		
+		
+	})(jQuery);
+</script>
+	
+
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+					
+					
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="">
+			
+			  
+		  	  
+				
+				<label for="juiz" class="" style="float:left;font-weight:bold;">Magistrado</label><div style="text-align:right;font-weight:bold;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="">
+		  
+		
+			
+	
+	
+	
+	
+	
+	<table cellpadding="0" cellspacing="0" border="0" width="515">
+		<tr>
+			<td>
+				
+				
+						
+
+
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="*">
+			
+							
+								
+								
+							<script>
+
+var agenteNomeCamposArray = new Array();
+ agenteNomeCamposArray[0] = 'cdAgente';
+ agenteNomeCamposArray[1] = 'nmAgente';
+ var cdAgenteNomeCamposArray = agenteNomeCamposArray;
+ var nmAgenteNomeCamposArray = agenteNomeCamposArray;</script>
+
+<table class="spwInputSelect" width="100%" border="0" cellspacing="0" cellpadding="0" id="agente" idPai="null" filtroPai="null" url="jsp/search/searchAgente.jsp" input-select="agente" property="dadosConsulta.agentes" name="cdAgente" title="Magistrados" ctxPath="/cjpg" multiplaSelecao="true"  useAction="false" bindings="&bind_cdAgente=cdAgente&bind_nmAgente=nmAgente"  entityPKClass="agentePK" idIframe="" altura="300" largura="500" useModulo="true" desabilitarSelecionados="false" carregaFilho="false"><tbody>
+<input type="hidden" name="agenteSelectedEntitiesList"  value="" id="agenteSelectedEntitiesList" />
+<input type="hidden" name="contadoragente"  value="0" id="contadoragente" />
+<input type="hidden" name="contadorMaioragente"  value="0" id="contadorMaioragente" />
+    <tr>
+								<td width="0%">
+            <input type="text" name="cdAgente" size="0%" id="cdAgente" bindingReference="cdAgente" value="" formatType="TEXT" pk="true" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" onchange="IS_request('agente','/AjaxServlet.ajax', 'agente', 'cdAgente', this.value,'/cjpg','jsp/search/searchAgente.jsp', 'true', 'Magistrados','300','500', '&bind_cdAgente=cdAgente&bind_nmAgente=nmAgente', 'false', event, 'InputSelectAutoComplete', '','false'); " style="width: 100%" class="hidden" input-select="agente" idIframe=""></td>
+								<td width="497">
+            <input type="text" name="nmAgente" size="497" id="nmAgente" bindingReference="nmAgente" value="" formatType="TEXT" obrigatorio="false" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" onchange="IS_request('agente','/AjaxServlet.ajax', 'agente', 'nmAgente', this.value,'/cjpg','jsp/search/searchAgente.jsp', 'true', 'Magistrados','300','500', '&bind_cdAgente=cdAgente&bind_nmAgente=nmAgente', 'false', event, 'InputSelectAutoComplete', '','false'); " style="width: 475px;" input-select="agente" idIframe=""></td>
+							
+        <td width="20" align="center"><img src="/cjpg/imagens/spw/botProcurar.gif" width="16" height="17" border="0" title="Abre a consulta" onmouseover="IH_mOver(this)" onmouseout="IH_mOut(this)" onclick="IS_request('agente','/AjaxServlet.ajax', 'agente', 'cdAgente','','/cjpg','jsp/search/searchAgente.jsp', 'true', 'Magistrados','300','500', '&bind_cdAgente=cdAgente&bind_nmAgente=nmAgente', 'true', event, 'InputSelectSearchGrid','','false')" ><img src="/cjpg/imagens/spw/botProcurar-d.gif" width="16" height="17" border="0" style="display:none" >
+        </td>
+    </tr>
+</tbody>
+</table>
+<script>
+
+</script>
+
+						
+		</td>
+		<td width="16" valign="middle">
+			<img src="/cjpg/imagens/spw/botLimpar.gif" width="16" height="17" border="0" title="Limpa campo"
+				onclick="jQuery.saj.limparInputSelect('agente');"
+				onmouseout="IH_mOut(this)" onmouseover="IH_mOver(this)"
+				style="cursor:pointer;" />
+		</td>
+	</tr>
+</table>
+
+					
+				
+			</td>
+		</tr>
+	  </table>
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+					
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="">
+			
+			  
+		  	  
+				
+				<label for="data" class="" style="float:left;font-weight:bold;">Data</label><div style="text-align:right;font-weight:bold;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="">
+		  
+		
+			
+	
+	
+	
+	
+	
+	<table cellpadding="0" cellspacing="0" border="0" width="600">
+		<tr>
+			<td>
+				
+				
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+<script type="text/javascript">
+	(function($){
+		$(function() {
+			var saj = $.saj;
+			var id = 'iddadosConsulta.dtInicio';
+			if ('' !== '' && !false) {
+				var idObjetoReferencia = '#' + id;
+				$(idObjetoReferencia).registrarTooltip({
+					conteudoTooltip: '',
+					posicaoTooltip: 'direita',
+					objReferenciaPosicaoTooltip:$(idObjetoReferencia)
+				});
+			} 
+		});		
+	})(jQuery);
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		<span id="">
+		
+	
+	
+	<input type="text" name="dadosConsulta.dtInicio" size="" value="" formatType="DATE" formato="" obrigatorio="" rotulo="(dd/mm/aaaa)" onkeypress="CD_KPS(this, event);" onblur="CD_BLR(this);" onkeydown="CD_KDN(this, event);" onmousemove="CD_MMOV(this, event);" onmouseout="CD_MOUT(this, event);" onmouseover="CD_MOV(this, event);" onfocus="CD_OFC(this, event);" style="" class="spwCampoTexto " id="iddadosConsulta.dtInicio" title="" alt="">
+		
+	
+	
+	
+		
+	    
+    
+	
+	
+	
+		
+	
+	
+	
+	
+		</span>
+	
+
+
+
+
+
+							até
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+<script type="text/javascript">
+	(function($){
+		$(function() {
+			var saj = $.saj;
+			var id = 'iddadosConsulta.dtFim';
+			if ('' !== '' && !false) {
+				var idObjetoReferencia = '#' + id;
+				$(idObjetoReferencia).registrarTooltip({
+					conteudoTooltip: '',
+					posicaoTooltip: 'direita',
+					objReferenciaPosicaoTooltip:$(idObjetoReferencia)
+				});
+			} 
+		});		
+	})(jQuery);
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		<span id="dtFim">
+		
+	
+	
+	<input type="text" name="dadosConsulta.dtFim" size="" value="11/11/2021" formatType="DATE" formato="" obrigatorio="" rotulo="(dd/mm/aaaa)" onkeypress="CD_KPS(this, event);" onblur="CD_BLR(this);" onkeydown="CD_KDN(this, event);" onmousemove="CD_MMOV(this, event);" onmouseout="CD_MOUT(this, event);" onmouseover="CD_MOV(this, event);" onfocus="CD_OFC(this, event);" style="" class="spwCampoTexto " id="iddadosConsulta.dtFim" title="" alt="">
+		
+	
+	
+	
+		
+	    
+    
+	
+	
+	
+		
+	
+	
+	
+	
+		</span>
+	
+
+
+
+
+
+						(dd/mm/aaaa)
+					
+				
+			</td>
+		</tr>
+	  </table>
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+
+					
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="">
+			
+			  
+		  	  
+				
+				<label for="varas_selectionText" class="" style="float:left;font-weight:bold;">Vara</label><div style="text-align:right;font-weight:bold;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="">
+		  
+		
+			
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table id="treeSelectVaras" cellspacing="0" cellpadding="0" width="515" class="treeSelect">
+	<tr>
+		<td width="*">
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td>
+						<input type="hidden" name="varasTreeSelection.values" value="" id="varas">
+						<span id="varas_action" value="/cjpg/varasTreeSelect.do" />
+						
+						<input type="text" name="varasTreeSelection.text" value="" formatType="TEXT" onkeypress="CT_KPS(this, event);" onblur="CT_BLR(this);" onkeydown="CT_KDN(this, event);" onmousemove="CT_MMOV(this, event);" onmouseout="CT_MOUT(this, event);" onmouseover="CT_MOV(this, event);" onfocus="C_OFC(this, event);" onchange="$.saj.tree.onTextPropertyChangeEvent({data:{ campoId: 'varas', 
+								treeSelectId: 'treeSelectVaras',
+								url: '/cjpg/varasTreeSelect.do', 
+								processandoImgUrl: '/cjpg/imagens/spw/processandoNovo.gif', 
+								width: 600,
+								expectedHeight: 400, 
+								reload: 'false' }});" style="width:100%;" id="varas_selectionText">
+					     
+					</td>
+					<td align="center" width="20">
+						<img id="botaoProcurar_varas"
+						src="/cjpg/imagens/spw/botProcurar.gif" class="treeSelect_botaoHabilitado" height="17" border="0" width="16" title="Abre a consulta" style="cursor: pointer; margin-left: 8px;" onmouseout="IH_mOut(this)" onmouseover="IH_mOver(this)" /><img
+						src="/cjpg/imagens/spw/botProcurar-d.gif" class="treeSelect_botaoDesabilitado" height="17" border="0" width="16" style="display:none; margin-left: 8px;" />
+					</td>
+				</tr>
+			</table>
+        </td>
+		<td width="16" valign="middle">
+			<img id="botaoLimpar_varas" 
+			src="/cjpg/imagens/spw/botLimpar.gif" class="treeSelect_botaoHabilitado" height="17" width="16" border="0" title="Limpa campo" onmouseout="IH_mOut(this)" onmouseover="IH_mOver(this)" /><img
+			src="/cjpg/imagens/spw/botLimpar-d.gif" class="treeSelect_botaoDesabilitado" height="17" width="16" border="0" style="display:none" />
+		</td>
+    </tr>
+</table>
+<script>
+	(function($) {
+				
+		var bindTreeSelect = function() {
+			var options = {
+				campoId: 'varas',
+				treeSelectId: 'treeSelectVaras',
+				url: '/cjpg/varasTreeSelect.do',
+				processandoImgUrl: '/cjpg/imagens/spw/processandoNovo.gif',
+				width: 600,
+				expectedHeight: 400,
+				reload: 'false',
+				mostrarBotoesSelecaoRapida: true
+			};
+
+			$.saj.tree.updateSelectionText(options);
+			
+			$('#botaoProcurar_varas').bind('click', options, $.saj.tree.onPopupEvent);
+			$('#botaoLimpar_varas').bind('click', options, $.saj.tree.onClearSelection);
+			
+			
+		};
+
+		bindTreeSelect();
+
+		
+		
+	})(jQuery);
+</script>
+	
+
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+					
+					
+					
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+	
+	
+		
+		
+			
+				<tr class="">
+				
+			
+		
+		
+		
+		  <td id="" width="150" valign="">
+			
+			  
+		  	  
+				
+				<label for="ordenar" class="" style="float:left;font-weight:bold;">Ordenar por</label><div style="text-align:right;font-weight:bold;">: </div>
+			  
+		      
+		    
+		  </td>
+		
+		
+		
+		  
+		  
+		    <td valign="">
+		  
+		
+			
+	
+	
+	
+	
+	
+	<table cellpadding="0" cellspacing="0" border="0" width="600">
+		<tr>
+			<td>
+				
+				
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<span id="">
+		
+			
+				<input type="radio" name="dadosConsulta.ordenacao" value="DESC" checked="checked" onclick="" style="vertical-align:middle;" class="" title="">
+			
+			
+		
+		Data decrescente
+		
+	</span>
+
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<span id="">
+		
+			
+				<input type="radio" name="dadosConsulta.ordenacao" value="ASC" onclick="" style="vertical-align:middle;" class="" title="">
+			
+			
+		
+		Data crescente
+		
+	</span>
+
+
+					
+				
+			</td>
+		</tr>
+	  </table>
+	
+	
+	
+	
+	
+	
+		
+		</td>
+		
+			</tr>
+		
+	
+	
+
+
+
+				
+				
+		</table>
+	</div>
+	
+	
+	
+
+			
+			
+				
+				
+
+
+
+
+
+
+
+
+
+	<table id="" class="secaoBotoesBody" width="100%" cellpadding="2" cellspacing="0" border="0">
+		<tr>
+ 			
+ 				<td width="150">&nbsp;</td>
+ 			
+			<td align="">
+			
+			    	
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+	<input type="submit" name="pbSubmit" value="Consultar" onclick="" onmouseover="B_mOver(this);" onmouseout="B_mOut(this);" onmouseover="B_mOver(this);" onmouseout="B_mOut(this);" class="spwBotaoDefault" id="pbSubmit">
+
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+	    
+	<input type="button" name="pbLimpar" value="Limpar" onclick="" onmouseover="B_mOver(this);" onmouseout="B_mOut(this);" class="spwBotao" id="pbLimpar">
+
+
+				
+			</td>
+		</tr>
+	</table>
+
+
+				
+			
+			
+			
+			
+			
+				
+					
+						<div id="resultados" class="espacamentoCimaBaixo">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+	<tr height="20">
+		<td bgcolor="#EEEEEE">
+			Resultados
+
+			<strong>
+				1 a 10
+			</strong>
+			de 15
+		</td>
+			
+		<td bgcolor="#EEEEEE" align="right">
+
+		<div class="trocaDePagina">
+		
+
+		
+		
+
+		
+		
+			
+		
+		
+			
+				
+					<span style="font-weight:bold;" >
+						1
+					</span>
+				
+				
+			
+		
+			
+				
+				
+					<a href="#" name="2" style="padding-left:4px" >
+						2
+					</a>
+				
+			
+		
+
+		
+			<a name="2" title="Próxima página">
+				&gt;
+			</a>
+		
+
+		</div>
+
+		</td>
+	</tr>
+
+	<tr>
+		<td height="1" bgcolor="#999999" colspan="2"></td>
+	</tr>
+</table>
+&nbsp;
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="1" valign="top" id="tdResultados" width="*" >							
+			
+
+ 
+
+
+
+
+<div id="divDadosResultado" >
+	<table cellspacing="0" cellpadding="0" class="" width="100%">
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>1&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="E2000LM8S0000-506-PG5RP-73188895" >
+									<span class="fonteNegrito"> 1031244-32.2021.8.26.0506 </span>
+								</a>
+								<a name="E2000LM8S0000-506-PG5RP-73188895" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Petição intermediária
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> VINICIUS RODRIGUES VIEIRA
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> Ribeirão Preto
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro de Ribeirão Preto
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> Vara do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 10/11/2021
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... participação no jogo denominado "<em>League</em> <em>of</em> <em>Legends</em>", utilizando-se do nome "ogum meu pai" e, para tanto, investiu R$ 1.889,70 para aquisição de moda virtual (Riot Points) utilizada para troca de itens do jogo. Relata ter recebido punição no ambiente do jogo por comportamento negativo, o que implicou na suspensão definitiva de sua conta. Contestou a punição, porém, ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de Ribeirão Preto
+
+Foro de Ribeirão Preto
+
+Vara do Juizado Especial Cível
+
+Rua Alice Alem Saadi, 1010, Ribeirão Preto-SP - cep 14096-570
+
+
+
+
+
+Processo nº:
+
+1031244-32.2021.8.26.0506
+
+Classe – Assunto:
+
+Procedimento do Juizado Especial Cível - Petição intermediária
+
+Requerente:
+
+Ary Guilherme Figueira Ribeiro
+
+Requerido:
+
+Riot Games Serviços Ltda.
+
+
+
+CONCLUSÃO
+
+Em 10/11/21�, faço estes autos conclusos a(o) Juiz(a) de Direito, Dr(a). Vinícius Rodrigues Vieira. Eu, ROBERTO DE ASSIS MATOS, Assistente Judiciário.
+
+
+
+Vistos.
+
+
+
+Trata-se de ação em que se pleiteia danos materiais e morais da qual são partes Ary Guilherme Figueira Ribeiro (requerente) x Riot Games Serviços Ltda. (requerida).
+
+Dispensado o relatório, nos termos do art. 38 da Lei 9.099/95.
+
+Narra o(a) requerente ter se cadastrado junto à requerida para participação no jogo denominado "<em>League</em> <em>of</em> <em>Legends</em>", utilizando-se do nome "ogum meu pai" e, para tanto, investiu R$ 1.889,70 para aquisição de moda virtual (Riot Points) utilizada para troca de itens do jogo. Relata ter recebido punição no ambiente do jogo por comportamento negativo, o que implicou na suspensão definitiva de sua conta. Contestou a punição, porém, voltou a participar com o nome "Bonaphisand", tendo solicitado a transferência dos itens e valores para o novo perfil, o que foi negado pela demandada. Pleiteia o recebimento do saldo de Riot Points na proporção de R$ 0,02092308 por riot point, ou seja, R$ 1.889,70; a transferência dos riots points da conta "ogum meu pai" para a conta "Bonaphisand", sob pena de multa diária de R$ 1.000,00, além de danos morais no valor de R$ 8.000,00 (fls. 1/21 e 47/48). 
+
+Em contestação, o(a) requerido(a) sustenta que o autor, jogador assíduo, possuía comportamento inadequado perante os demais participantes via chat, utilizando palavras de baixo calão, ofensas gratuitas, agressão verbal, contribuindo para um ambiente tóxico na partida, violando os termos de uso. Descreve histórico de comportamentos preconceituosos por parte do requerente, que implicaram em punições e em suspensão permanente da conta. Atribui culpa exclusiva ao reclamante. Argumenta inexistir estipulação legal ou contratual que obrigue o restabelecimento da conta ou a transferência de bens virtuais para uma segunda conta, conforme item 3.1 do termo de uso (fls. 85). Pugna pela improcedência da ação, por ter atuado no exercício regular do direito (fls. 62/99).
+
+Em manifestação acerca da contestação apresentada, a parte autora reitera os termos da inicial, salientando ter havido alteração nos termos de uso por parte da requerida, após ter sofrido ação judicial, configurando contrato de adesão. Ressalta ter criado sua conta em data anterior às alterações. Pede condenação da ré por litigância de má-fé (fls. 768/774).
+
+As partes dispensaram a produção de provas em audiência (fls. 765).
+
+FUNDAMENTO E DECIDO.
+
+A demanda comporta julgamento antecipado do mérito, haja vista a desnecessidade de produção de outras provas, a teor do que dispõem os arts. 355, inciso I e 443, ambos do Código de Processo Civil. Assim já se posicionou o STJ e o STF. 
+
+A existência de relação jurídica entre as partes é fato incontroverso, porque admitida pela requerida em sua contestação.
+
+Há divergência acerca de ter ocorrido abusividade na conduta da requerida a ensejar reparação por danos materiais e morais.
+
+A ação é improcedente.
+
+Em que pese tratar-se de relação de consumo, inaplicável a regra de inversão do ônus da prova, pois, cabia à parte autora a prova dos fatos constitutivos do seu direito.
+
+Nesse sentido:
+
+“Não ocorre a inversão automática do ônus da prova na hipótese de relação jurídica regida pelo CDC, uma vez que é indispensável a verossimilhança das alegações do consumidor ou sua hipossuficiência, não bastando apenas o fato de a relação ser consumerista, pois a facilitação da defesa dos direitos do consumidor não significa facilitar a procedência dos seus pedidos, mas a elucidação dos fatos por ele narrados, transferindo o ônus da prova a quem, em tese, possua melhores condições de fazê-lo, em razão da assimetria técnica e informacional existente entre as partes em litígio.” (REsp 9ª 27.457/SP, Rel. Ministro LUIS FELIPE SALOMÃO, QUARTA TURMA, julgado em 13/12/2011, DJe 01/02/2012). 
+
+De acordo com o art. 373, inciso I, do Código de Processo Civil, incumbe ao autor provar os fatos constitutivos do seu direito e, nos termos do inciso II, cabe ao réu o ônus da prova quanto à existência de fato impeditivo, modificativo ou extintivo do direito do autor, o que, de fato, ocorreu, pois, a demandada desincumbiu-se do encargo que lhe competia, qual seja, provar ter o autor infringido os termos de uso do jogo on line e a existência de previsão contratual acerca dos termos de utilização.
+
+Embora o requerente alegue ter havido alteração unilateral dos termos de uso após ter feito o cadastro de sua conta, certo é que o documento de fls. 26 trazido autos pelo próprio reclamante deixa claro ter a ré lhe concedido licença limitada, não exclusiva, intransferível e revogável para utilizar os seus serviços.
+
+Ora, houve a concordância do requerente com a contratação, ou seja, não foi obrigado a manter relações negociais com a parte requerida, a qual apenas exerceu regularmente seu direito previsto no contrato ao aplicar a punição e a exclusão permanente da conta.
+
+O autor tinha plena ciência dos termos de uso quando aderiu ao contrato de utilização do jogo on line, concordando com eles quando contratou.
+
+O contrato faz lei entre as partes, devendo ser respeitado, em todos os seus termos, de acordo com o princípio do pacta sunt servanda.
+
+O requerente fora excluído pela requerida em virtude de violação às regras do termo de uso e, de acordo com o disposto nos itens 3.1. e 4.3. (fls. 26/27), a licença concedida é limitada e intransferível, portanto, não merecem acolhimento os pedidos formulados na inicial.
+
+No que diz respeito aos danos morais, os fatos versam sobre mero conflito contratual, dele não resultando qualquer ofensa à honra ou dignidade da parte autora nem sofrimento intenso e duradouro. 
+
+Vale observar que o Colégio Recursal da Capital já consolidou o entendimento jurisprudencial no sentido de que o conflito contratual não dá ensejo a indenização por dano moral.
+
+Neste sentido foi emitido o Enunciado nº 25, dispondo que "o simples descumprimento do dever legal ou contratual, por caracterizar mero aborrecimento, em princípio, não configura dano moral, salvo se da infração advém circunstância que atinja a dignidade da parte" (Enunciado 25 do I Encontro do Primeiro Colégio Recursal dos Juizados Especiais Cíveis da Capital no Encontro de Juízes de Juizados Especiais e Colégios Recursais em reunião administrativa do Colégio Recursal Unificado e no I FOJESP, in DJE do TJSP de 2.10.2009, pág. 30). 
+
+Para que o pagamento de indenização por danos morais seja devido, é preciso que se demonstre a existência da ação ou omissão da parte contrária, sua culpa, o dano causado e o nexo de causalidade entre a ação ou omissão e o dano. 
+
+Ausentes quaisquer destes elementos, a indenização é indevida. 
+
+No caso em tela, os requisitos não foram cabalmente demonstrados pela parte autora. O fato narrado na inicial não pode ser visto como dano moral causado à parte requerente, vez que se trata de mero aborrecimento experimentado por todos os cidadãos que compõem a sociedade como um todo.
+
+Neste diapasão, para que se configure o dano moral, deve haver nexo de causalidade entre a conduta do ofensor e o prejuízo causado pela sua conduta.
+
+Na hipótese, não houve qualquer dano experimentado pelo autor face dos fatos aqui analisados. A indenização por danos morais não pode ser transformada em um modo fácil de enriquecimento do autor da ação.
+
+A indenização é devida para reparar um dano provocado por atitude culposa da parte contrária, sem configurar uma forma de confisco, nem, tampouco, forma de enriquecimento da outra parte.
+
+Destarte, sem que se fiquem demonstrados: a ação ou omissão, culpa da parte contrária, o nexo de causalidade, ou o dano sofrido, a indenização é indevida e, no caso, indevido o pagamento de indenização por parte da ré, sob pena de se estar enriquecendo ilicitamente a parte adversa.
+
+Nesse sentido, oportuno destacar parte do voto proferido no Superior Tribunal de Justiça sobre a banalização do instituto de danos morais, nos seguintes termos e conforme Min. João Otávio de Noronha: "o Brasil deturpou o sentido de dano moral", de modo que se criou uma espécie de "dano moral automático". O erro, por si só, gera dano moral, ainda que desacompanhado de dolo, da intenção. Bastou errar: dano moral. Nós criamos uma indústria mais perversa de dano moral do que aquela combatida já nos Estados Unidos, tal o grau de utilização do instituto. Qualquer coisa: dano moral. Qualquer equívoco: dano moral." (REsp 1.386.424).
+
+Ademais, em decisão do REsp 1426710, a relatora do caso, ministra Nancy Andrighi, recordou que juristas que defendem a indenização por danos morais não podem banalizá-la, destacando que é preciso haver critérios razoáveis para estabelecer uma condenação desta natureza, e que situações normais da vida cotidiana não devem servir de justificativa para condenação “abstrata” por danos morais, já que incapazes de afetar o âmago da dignidade humana, e que não é qualquer situação de incômodo que é capaz de configurar prejuízo moral: “Nessa tendência de vulgarização e banalização da reparação por danos morais, cumpre aos julgadores resgatar a dignidade deste instituto, que, conforme nos ensina Cahali, foi penosamente consagrado no direito pátrio. Esse resgate passa, necessariamente, por uma melhor definição de seus contornos e parcimônia na sua aplicação, para invocá-lo apenas em casos que reclamem a atuação jurisdicional para o reparo de grave lesão à dignidade da pessoa humana”.
+
+E completou: “Em outra perspectiva, a dificuldade de se provar a dor oculta transforma as partes em atores de um espetáculo para demonstrar a dor que não se sente ou, diga-se ainda, para apresentar aquela dor que, além de não se sentir, é incapaz de configurar dano moral.x.
+
+Por fim, saliento não ser hipótese de condenação da requerida por litigância de má-fé, haja vista não ter ficado caracterizada e existência de dolo.
+
+Ante o exposto e considerando todo mais que dos autos constam, JULGO IMPROCEDENTE A AÇÃO proposta em face de Riot Games Serviços Ltda por Ary Guilherme Figueira Ribeiro. 
+
+Anoto, por oportuno, que os demais argumentos expostos na contestação/inicial foram observados pelo juízo e não foram considerados como capazes de infirmar ou alterar a conclusão adotada nesta sentença.
+
+Sem condenação nos ônus da sucumbência, a teor do que dispõe o art. 55 da Lei nº 9.099/95.
+
+Por fim, havendo interesse na interposição de recurso, conforme Comunicado 1530/2021, no sistema dos Juizados Especiais, ressalvada a hipótese de concessão de gratuidade da justiça, o preparo corresponderá: a) à taxa judiciária de ingresso, no importe de 1% sobre o valor da causa, observado o valor mínimo de 5 (cinco) UFESPs; b) à taxa judiciária referente às custas de preparo, no importe de 4% sobre o valor fixado na sentença, se líquido, ou sobre o valor fixado equitativamente pelo MM. Juiz de Direito, se ilíquido, ou, ainda, 4% sobre o valor atribuído à causa na ausência de pedido condenatório; c) às despesas processuais referentes a todos os serviços forenses eventualmente utilizados. O preparo será recolhido de acordo com os critérios acima estabelecidos independente de cálculo elaborado pela serventia, a qual apenas será responsável pela conferência dos valores e elaboração da certidão para juntada aos autos.
+
+P.R.I. 
+
+Ribeirão Preto, 09 de novembro de 2021.
+
+VINICIUS RODRIGUES VIEIRA
+
+Juiz(a) de Direito 
+
+(assinatura em formato digital)
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>2&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="JB0001LHJ0000-695-PG5FOF-13317592" >
+									<span class="fonteNegrito"> 1000512-83.2021.8.26.0695 </span>
+								</a>
+								<a name="JB0001LHJ0000-695-PG5FOF-13317592" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Rescisão do contrato e devolução do dinheiro
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> ORLANDO GONÇALVES DE CASTRO NETO
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> Nazaré Paulista
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro de Nazaré Paulista
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> Anexo dos Juizados Especiais Cível e Criminal
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 16/06/2021
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... sofreu uma punição no jogo <em>League</em> <em>of</em> <em>Legends</em>. Ainda, que já adquiriu produtos no jogo. Assim, pretende a revogação do banimento ou, subsidiariamente, o reembolso dos valores já gastos com o jogo virtual. 
+
+
+
+Em defesa, a requerida informou detalhadamente o funcionamento do jogo e, no mérito, alegou que o requerente fora banido da plataforma por comportar-se de ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de Nazaré Paulista
+
+Foro de Nazaré Paulista
+
+Anexo dos Juizados Especiais Cível e Criminal
+
+Rua Clementino de Passos, Almeida 35, Nazaré Paulista-SP - cep 12960-000
+
+Horário de Atendimento ao Público: das Horário de Atendimento ao Público << Informação indisponível >>
+
+
+
+															1000512-83.2021.8.26.0695 - lauda 
+
+SENTENÇA
+
+
+
+Processo Digital nº:
+
+1000512-83.2021.8.26.0695
+
+Classe – Assunto:
+
+Procedimento do Juizado Especial Cível - Rescisão do contrato e devolução do dinheiro
+
+Requerente:
+
+Andre Felipe Aurieme Gouvêa
+
+Requerido:
+
+Riot Games Serviços Ltda.
+
+
+
+
+
+
+
+
+
+Juiz(a) de Direito: Dr(a). ORLANDO GONÇALVES DE CASTRO NETO
+
+
+
+
+
+Vistos.
+
+
+
+Relatório dispensado (art. 38, Lei nº 9.099/95).
+
+ 
+
+Fundamento e decido.
+
+
+
+Trata-se de pedido de obrigação de fazer formulado por ANDRÉ FELIPE AURIEME GOUVÊA em face de RIOT GAMES SERVIÇOS LTDA. Alega que, equivocadamente e de maneira desproporcional, sofreu uma punição no jogo <em>League</em> <em>of</em> <em>Legends</em>. Ainda, que já adquiriu produtos no jogo. Assim, pretende a revogação do banimento ou, subsidiariamente, o reembolso dos valores já gastos com o jogo virtual. 
+
+
+
+Em defesa, a requerida informou detalhadamente o funcionamento do jogo e, no mérito, alegou que o requerente fora banido da plataforma por comportar-se de maneira inadequada, utilizando expressões de cunho preconceituoso (p. 113). Apresentou transcrição de chat (fls. 546) e e-mails (fls. 116) nos quais o requerente confessa a violação dos termos de uso. Ao final, pugnou pela improcedência. 
+
+ 
+
+Procedo ao julgamento antecipado do mérito, conforme art. 355, I, do CPC, por não haver mais provas a serem produzidas.
+
+
+
+		Afasto as preliminares arguidas com fundamento no art. 488 do CPC (“Desde que possível, o juiz resolverá o mérito sempre que a decisão for favorável à parte a quem aproveitaria eventual pronunciamento nos termos do art. 485”).
+
+ 
+
+Presentes os pressupostos processuais, a legitimidade das partes e o interesse processual, passo ao julgamento do mérito.
+
+ 
+
+Os pedidos são improcedentes. 
+
+ 
+
+Aplicam-se as regras consumeristas, pois se trata de relação de consumo na medida em que a parte autora é consumidora (art. 2º, CDC) e a parte ré é fornecedora de serviços (art. 3º, CDC), razão por que inverto o ônus da prova (art. 6º, VIII, CDC).
+
+ 
+
+A despeito da inversão do ônus probatório, a parte ré dele se desincumbiu (art.  373, II, CPC e art. 6º, VIII, CDC) na medida em que apresentou defesa na qual comprova a reiterada conduta do autor de maneira incompatível com os termos de uso do software ao se utilizar de linguajar inadequado e ter ações que visavam ofender os demais integrantes de sua equipe, infringindo as regras de utilização e, assim, autorizando o encerramento da conta pela requerida nos termos de uso da empresa. 
+
+ 
+
+Ressalte-se que, em e-mail, o autor confirma tais atos, informando que “já se fazem quase 5 anos em que fui banido, desde desse tempo tive inúmeros problemas devido minha atitude racista e degenerada”.
+
+ 
+
+Pouco importando o contexto, bastaria que se analisasse a conduta do requerente em desconformidade com a política de utilização do software para que se observe a irregularidade das condutas do autor e, assim, tornando válida a punição recebida, cabendo frisar que, de acordo com os termos da empresa, é possível que punição mais grave seja aplicada em casos de “comportamentos negativos extremos”, tais como a prática de racismo, razão pela qual a tese de desproporcionalidade é afastada.
+
+ 
+
+Regular o banimento, passo a analisar o pedido subsidiário.
+
+ 
+
+Igualmente improcedente.
+
+ 
+
+A compra de 'riot points' é mera faculdade do requerente e estes 'pontos' foram regularmente utilizados pelo autor em sua conta, não havendo qualquer fundamento para seu reembolso, já que a conta utilizada na plataforma foi regularmente banida e, com ela, de maneira acessória, os 'Conteúdos virtuais' a ela vinculados, os quais o autor adquirira o 'direito de utilização' e o fizera até a infração cometida.
+
+ 
+
+Cabe ressaltar, inclusive, a previsão contratual acerca da inexistência de reembolso a qual, no caso em análise, ante as peculiaridades, não se mostra abusiva.
+
+ 
+
+Nessa seara, é o atual posicionamento do E. TJSP acerca do mesmo jogo:
+
+
+
+Suspensão permanente de conta de jogo online. Descumprimento pelo autor das regras de conduta. Ofensas reiteradas, com o uso de palavras de baixo calão e de caráter discriminatório. Resolução do contrato por culpa exclusiva do autor. Exercício regular do direito da ré. Recurso provido para julgar improcedente a presenteação.(TJSP; Recurso Inominado Cível 1002728-56.2017.8.26.0016; Relator (a): Claudia Caputo Bevilacqua Vieira;Órgão Julgador: Nona Turma Cível; Foro Central Juizados Especiais Cíveis - 2ªVara do Juizado Especial Cível - Vergueiro; Data do Julgamento: 11/12/2017;Data de Registro: 11/12/2017)
+
+
+
+INDENIZAÇÃO. JOGO ELETRÔNICO. Comprovação de que uma das contas do autor foi suspensa por falta de pagamento e, a outra, por violação aos termos de uso do jogo. Cláusula contratual expressa no sentido de impossibilidade de reembolso de valores pagos a título de "riot points", moedas virtuais utilizadas para aquisição de itens ornamentais para os personagens do jogo. Indenização por dano moral descabida. Sentença mantida. RECURSO DESPROVIDO. (TJSP; Apelação Cível 1034811-20.2016.8.26.0224; Relator(a): Afonso Bráz; Órgão Julgador: 17ª Câmara de Direito Privado; Foro de Guarulhos - 6ª Vara Cível; Data do Julgamento: 18/10/2017; Data de Registro:25/10/2017).
+
+ 
+
+Ademais, ainda que não o fosse, a pretensão da autor está fulminada pela prescrição, sendo que, em casos de enriquecimento sem causa, o prazo prescricional é de 3 (três) anos, tal como define o art. 206, parágrafo 3º, inciso IV, e, no caso em tela, decorreram-se 4 (quatro) anos desde o banimento da conta.
+
+ 
+
+Por fim, não é devida indenização por danos morais. Isso porque, no caso em tela, não houve violação a quaisquer dos direitos da personalidade protegidos pelo art. 5º, X, da Constituição Federal (intimidade, privacidade, imagem e honra), não tendo a parte ré violado a intimidade ou privacidade da parte autora, tampouco negativado ou protestado indevidamente seu nome, não lhe maculando a honra ou a imagem.
+
+ 
+
+Diante do exposto, julgo IMPROCEDENTE o pedido, extinguindo o processo com resolução do mérito nos termos do art. 487, I, do CPC.
+
+ 
+
+Sem condenação nas verbas de sucumbência (art. 55, Lei nº 9.099/95).
+
+ 
+
+Após o trânsito em julgado, arquivem-se os autos com as cautelas de praxe.
+
+ 
+
+Publique-se. Intimem-se as partes. Cumpra-se.
+
+
+
+Dispensado o registro (Provimento CGJ nº 27/2016).
+
+
+
+
+
+Nazaré Paulista, 14 de junho de 2021.
+
+
+
+
+
+
+
+
+
+DOCUMENTO ASSINADO DIGITALMENTE NOS TERMOS DA LEI 11.419/2006, CONFORME IMPRESSÃO À MARGEM DIREITA
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>3&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="8400062VC0000-292-PG5SJCA-94811751" >
+									<span class="fonteNegrito"> 0006156-06.2020.8.26.0292 </span>
+								</a>
+								<a name="8400062VC0000-292-PG5SJCA-94811751" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Obrigação de Fazer / Não Fazer
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> PAULO ROBERTO CICHITOSI
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> Jacareí
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro de Jacareí
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> Vara do Juizado Especial Cível e Criminal
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 30/04/2021
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... sofreu uma punição no jogo <em>League</em> <em>of</em> <em>Legends</em>. Ainda, que já adquiriu produtos no jogo. Assim, pretende a revogação do banimento ou, subsidiariamente, o reembolso dos valores já gastos com o jogo virtual.
+
+Em defesa a requerida informou detalhadamente o funcionamento do jogo e, no mérito, alegou que o requerente fora banido da plataforma por comportar-se de maneira ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de Jacareí
+
+Foro de Jacareí
+
+Vara do Juizado Especial Cível e Criminal
+
+Rua Capitão João José de Macedo, 478, Jacarei-SP - cep 12327-030
+
+Horário de Atendimento ao Público: das 12h30min às18h00min
+
+
+
+															0006156-06.2020.8.26.0292 - lauda 
+
+SENTENÇA
+
+
+
+Processo Digital nº:
+
+0006156-06.2020.8.26.0292
+
+Classe – Assunto:
+
+Procedimento do Juizado Especial Cível - Obrigação de Fazer / Não Fazer
+
+Requerente:
+
+Alexandre Bueno Leite
+
+Requerido:
+
+RIOT GAMES SERVIÇOS LTDA.
+
+
+
+
+
+
+
+
+
+Juiz(a) de Direito: Dr(a). PAULO ROBERTO CICHITOSI
+
+
+
+
+
+
+
+Vistos.
+
+Trata-se de pedido de obrigação de fazer formulado por ALEXANDRE BUENO LEITE em face de RIOT GAMES SERVIÇOS LTDA. Alega que, equivocadamente e de maneira desproporcional, sofreu uma punição no jogo <em>League</em> <em>of</em> <em>Legends</em>. Ainda, que já adquiriu produtos no jogo. Assim, pretende a revogação do banimento ou, subsidiariamente, o reembolso dos valores já gastos com o jogo virtual.
+
+Em defesa a requerida informou detalhadamente o funcionamento do jogo e, no mérito, alegou que o requerente fora banido da plataforma por comportar-se de maneira inadequada de forma reiterada (p. 50). Apresentou transcrição de chat e e-mails nos quais o requerente confessa a violação dos termos de uso. Ao final, pugnou pela improcedência.
+
+Réplica apresentada
+
+Conciliação infrutífera. 
+
+Relatados, fundamento e DECIDO.
+
+Não havendo necessidade da produção de outras provas, julgo antecipadamente o pedido na forma do artigo 355, I do Código de Processo Civil.
+
+O pedido principal é improcedente.
+
+A requerente apresentou defesa na qual comprova (art. 373, II, CPC) a reiterada conduta do autor de maneira incompatível com os termos de uso do software ao se utilizar de linguajar inadequado e ter ações que visavam prejudicar, ainda que indiretamente, os demais integrantes de sua equipe, infringindo as regras de utilização e, assim, autorizando o encerramento da conta pela requerida nos termos da Cláusula 2.1.2 (p. 82).
+
+Ressalte-se que em réplica o autor confirma tais atos, informando que estava irritado [...] sendo que eu estava apensa frustrado pois estava com muita stresse [...] sendo assim eu acabei perdendo a cabeça algumas vezes (sic - p. 240).
+
+Pouco importando o contexto, bastaria que se analisasse a conduta do requerente em desconformidade com a política de utilização do software para que se observe a irregularidade das condutas do autor e, assim, tornando válida a punição recebida, cabendo frisar que já houvera punição anterior, razão pela qual a tese de desproporcionalidade é afastada.
+
+Regular o banimento, passo a analisar o pedido subsidiário.
+
+Igualmente improcedente.
+
+A compra de 'riot points' é mera faculdade do requerente e estes 'pontos' foram regularmente utilizados pelo autor em sua conta, não havendo qualquer fundamento para seu reembolso, já que a conta utilizada na plataforma foi regularmente banida e, com ela, de maneira acessória, os 'Conteúdos virtuais' a ela vinculados, os quais o autor adquirira o 'direito de utilização' e o fizera até a infração cometiva.
+
+Cabe ressaltar, inclusive, a previsão contratual acerca da inexistência de reembolso a qual, no caso em análise, ante as peculiaridades, não se mostra abusiva.
+
+Nesse sentido é o atual posicionamento do E. TJSP acerca do mesmo jogo:
+
+Suspensão permanente de conta de jogo online. Descumprimento pelo autor das regras de conduta. Ofensas reiteradas, com o uso de palavras de baixo calão e de caráter discriminatório. Resolução do contrato por culpa exclusiva do autor. Exercício regular do direito da ré. Recurso provido para julgar improcedente a presente ação. (TJSP;  Recurso Inominado Cível 1002728-56.2017.8.26.0016; Relator (a): Claudia Caputo Bevilacqua Vieira; Órgão Julgador: Nona Turma Cível; Foro Central Juizados Especiais Cíveis - 2ª Vara do Juizado Especial Cível - Vergueiro; Data do Julgamento: 11/12/2017; Data de Registro: 11/12/2017)
+
+INDENIZAÇÃO. JOGO ELETRÔNICO. Comprovação de que uma das contas do autor foi suspensa por falta de pagamento e, a outra, por violação aos termos de uso do jogo. Cláusula contratual expressa no sentido de impossibilidade de reembolso de valores pagos a título de "riot points", moedas virtuais utilizadas para aquisição de itens ornamentais para os personagens do jogo. Indenização por dano moral descabida. Sentença mantida. RECURSO DESPROVIDO. (TJSP;  Apelação Cível 1034811-20.2016.8.26.0224; Relator (a): Afonso Bráz; Órgão Julgador: 17ª Câmara de Direito Privado; Foro de Guarulhos - 6ª Vara Cível; Data do Julgamento: 18/10/2017; Data de Registro: 25/10/2017)
+
+Ante o exposto, JULGO IMPROCEDENTES os pedidos.
+
+Sem condenação em custas e honorários, nos termos do artigo 55, caput, da Lei 9099/95. 
+
+Cientes as partes que para a interposição de razões de apelação é necessário o recolhimento: I. da taxa judiciária, nos termos do artigo 698 das Normas de Serviço da Corregedoria Geral da Justiça, cujos valores deverão ser recolhidos pelo Portal de Custas (https://portaldecustas.tjsp.jus.br/portaltjsp/login.jsp). Informações e manuais para a utilização do Portal de Custas podem ser encontrados no endereço https://www.tjsp.jus.br/PortalCustas. II. das despesas processuais dispensadas em 1º grau de jurisdição (deverão ser recolhidas INTEGRALMENTE, pela parte recorrente, TODAS as despesas postais com citações e intimações; diligências de oficial de justiça; relatórios de pesquisa INFOJUD, BACENJUD, RENAJUD E SERASAJUD; taxa de mandato judicial, INDEPENDENTEMENTE da parte que tenha se beneficiado ou sido destinatária da diligência), nos termos do artigo 54, parágrafo único, da Lei 9.099/95, que deverão ser recolhidas junto ao Banco do Brasil – Formulários São Paulo (https://www.bb.com.br/pbb/pagina-inicial/setor-publico/judiciario/formularios---sao-paulo#/)
+
+Para o cálculo do valor do preparo, utilizar como base as informações disponibilizadas pelo TJSP no link: http://www.tjsp.jus.br/IndicesTaxasJudiciarias/DespesasProcessuais  .
+
+O não recolhimento ou recolhimento em valor menor da taxa judiciária e das despesas processuais descritas nos itens I e II acarretará na deserção do recurso, nos termos do Enunciado 12 do Comunicado 01/2007 do Colégio Recursal dos Juizados Especiais Cíveis e Criminais do Estado de São Paulo: “Na hipótese de não se proceder ao recolhimento integral do preparo recursal no prazo do artigo 42 da Lei 9.099/95, o recurso será considerado deserto, sendo inaplicável o artigo 511 do Código de Processo Civil”, não sendo possível a compensação de valores entre taxa e despesas, por se tratarem de tributos com destinação específica.
+
+Os recolhimentos, a partir de 01/03/2017, devem ser feitos pelo Portal de Custas – Recolhimentos e Depósitos do TJSP, que substituiu o sistema de preenchimento de guias DARE no Ambiente de Pagamentos da Secretaria da Fazenda (Com. Conj. TJSP e CGJ 474/2017 - DJE, 20/02/2017, p. 1/2, Cad I, Adm).
+
+Os valores referentes ao preparo ou eventual complementação do preparo deverão ser recolhidos, independentemente de intimação, em até 48 horas contadas do momento da distribuição do recurso, nos termos do art. 42, § 1º da Lei 9099/95, não se aplicando ao rito específico do Juizado Especial Cível o disposto no artigo 1.007, § 4º, do Código de Processo Civil.
+
+Transitada esta em julgado, cumpra-se o Comunicado CG 1789/2017.
+
+Int.
+
+
+
+Jacarei, 26 de abril de 2021.
+
+
+
+
+
+DOCUMENTO ASSINADO DIGITALMENTE NOS TERMOS DA LEI 11.419/2006, CONFORME IMPRESSÃO À MARGEM DIREITA
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>4&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="GP0000Y7Z0000-602-PG5SORC-73571021" >
+									<span class="fonteNegrito"> 1001070-80.2020.8.26.0601 </span>
+								</a>
+								<a name="GP0000Y7Z0000-602-PG5SORC-73571021" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Rescisão do contrato e devolução do dinheiro
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> Tamar Oliva de Souza Totaro
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> Sorocaba
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro de Sorocaba
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> 2ª Vara do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 17/04/2021
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... suspensa definitivamente do jogo <em>League</em> <em>of</em> <em>Legends</em> administrado pela ré, após receber duas punições consecutivas por demonstrar comportamento negativo, sendo que há previsão expressa nos Termos de Serviços do jogo para que a suspensão permanente seja aplicada apenas pela quarta (e não segunda) violação às políticas de uso e comportamento.
+
+Afirmou que investiu R$ ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de Sorocaba
+
+2ª Vara do Juizado Especial Cível
+
+Rua Vinte e Oito de Outubro, 691, Sala 101, Alto da Boa Vista - CEP 18087-080, Fone: (15) 2102-8379, Sorocaba-SP - E-mail: sorocabajec@tjsp.jus.br
+
+
+
+
+
+SENTENÇA
+
+
+
+
+
+Reclamação:
+
+1001070-80.2020.8.26.0601 - Procedimento do Juizado Especial Cível
+
+
+
+
+
+Requerente:
+
+Richard Thomitão
+
+Requerido:
+
+Riot Games Serviços Ltda (Riot Games)
+
+
+
+
+
+Vistos. 
+
+Trata-se de ação ajuizada por RICHARD THOMITÃO em face de RIOT GAMES SERVIÇOS LTDA, alegando que teve sua a conta suspensa definitivamente do jogo <em>League</em> <em>of</em> <em>Legends</em> administrado pela ré, após receber duas punições consecutivas por demonstrar comportamento negativo, sendo que há previsão expressa nos Termos de Serviços do jogo para que a suspensão permanente seja aplicada apenas pela quarta (e não segunda) violação às políticas de uso e comportamento.
+
+Afirmou que investiu R$ 619,30 em compras no ambiente do jogo e, além do prejuízo financeiro, sofreu dano moral por ter o direito de interação social cerceado, além de repercussão negativa em seu perfil na plataforma.
+
+Requereu em caráter de tutela de urgência que a ré reative sua conta em 24 horas. Ao final, pediu sua procedência definitiva ou, subsidiariamente, que a ré seja condenada a transferir os bens virtuais investidos para outra conta ativa de sua propriedade. Ademais, pleiteou indenização por danos morais no valor de R$ 6.000,00.
+
+Tutela de urgência indeferida, bem como audiência de conciliação dispensada (fls. 118/119).
+
+Em contestação tempestiva (fls.124/154), a ré afirmou que o autor tinha comportamento completamente inadequado com os demais jogadores, utilizando palavras de baixo calão, ofensas e agredindo verbalmente jogadores no chat da plataforma, infringindo os “Termos de Uso”, inclusive praticando misoginia ao se referir a usuárias por nomes como “vagabunda, putinha e arrombada”, sendo punido por comportamento tóxico, após ser reportado por outros usuários.
+
+Alegou que advertiu o autor para que pudesse ajustar a conduta, entretanto o requerente voltou a comportar-se de maneira ofensiva.
+
+Afirmou que não é cabido o pedido subsidiário de restituição dos valores gastos na plataforma, pois o jogo é gratuito e o valor investido pelos usuários convertem-se em Riot Points, moedas virtuais utilizadas para aquisição de artefatos meramente opcionais e decorativos para as personagens, de modo que os valores já foram utilizados à época. Por fim, negou a existência de dano moral indenizável.
+
+Em réplica (fls. 306/310), o autor concordou que violou os Termos de Serviços da Ré, entretanto afirma que de acordo com a política do jogo, o usuário deve sofrer punição progressiva, sendo a suspensão permanente aplicada somente na quarta violação, o que não foi observado.
+
+No mais, dispensado o relatório, na forma do art. 38, caput, da Lei n.º 9.099/95. Fundamento e DECIDO.
+
+O processo comporta imediato julgamento, como prevê o artigo 355, inciso I, do Código de Processo Civil, pois não há necessidade de produção de novas provas. 
+
+A pretensão é improcedente. 
+
+Restou incontroverso que o autor infringiu os Termos de Serviços ao se comportar de forma indevida com outros usuários do jogo. A controvérsia reside na legalidade da suspensão da conta, devolução dos valores gastos, bem como dano moral indenizável.
+
+Observo que nos documentos juntados às fls. 300/301, não impugnados pelo autor, é possível visualizar o modo como o requerente se portava no chat do jogo, demonstrando comportamento agressivo ao proferir xingamentos, com grave atitude misógina contra usuárias. Como bem afirma em inicial, atualmente os games não são apenas plataforma de entretenimento e sim forma importante de interação social para um grupo expressivo de pessoas, de modo que tal comportamento não deva ser admitido no mundo virtual.
+
+Assertivos os Termos de Serviços da ré, cuja cláusula 7 (fls. 180/181) prevê o banimento do usuário que produzir conteúdo “razoavelmente ofensivo para os jogadores, inclusive linguagem que seja ilegal, prejudicial, ameaçadora, abusiva, assediadora, difamatória, vulgar, obscena, sexualmente explícita ou racialmente, eticamente ou de outra forma condenável”. 
+
+Em que pese o argumento do autor de que deveria ter a conta suspensa de modo permanente somente após a quarta violação aos termos, não se mostra viável que o usuário permaneça na plataforma com tal comportamento, após reincidir na má postura.
+
+Além disso, os próprios Termos de Serviço prevê que o usuário que viola a política pode ser banido a qualquer momento, o que demonstra culpa exclusiva do consumidor, de acordo com o Código de Defesa do Consumidor, art. 14, § 3.
+
+Do mesmo modo, não merece amparo o pedido de transferência dos valores gastos para outra conta do autor, uma vez que restou expresso nos Termos de Serviço que, ao violar a política do usuário, o consumidor não terá mais acesso ao conteúdo virtual, inclusive as moedas do jogo (fls. 173). Ademais, a quantia investida na plataforma já foi utilizada pelo requerente ao personalizar seu personagem. Sobre o tema:
+
+
+
+INDENIZAÇÃO. JOGO ELETRÔNICO. Comprovação de que uma das contas do autor foi suspensa por falta de pagamento e, a outra, por violação aos termos de uso do jogo. Cláusula contratual expressa no sentido de impossibilidade de reembolso de valores pagos a título de "riot points", moedas virtuais utilizadas para aquisição de itens ornamentais para os personagens do jogo. Indenização por dano moral descabida. Sentença mantida. RECURSO DESPROVIDO.  (TJSP;  Apelação Cível 1034811-20.2016.8.26.0224; Relator (a): Afonso Bráz; Órgão Julgador: 17ª Câmara de Direito Privado; Foro de Guarulhos - 6ª Vara Cível; Data do Julgamento: 18/10/2017; Data de Registro: 25/10/2017)
+
+
+
+No mais, não havendo ato ilícito por parte da ré, não há que se falar em indenização por danos morais.
+
+
+
+Isso posto, JULGO IMPROCEDENTE a pretensão de RICHARD THOMITÃO em face de RIOT GAMES SERVIÇOS LTDA.
+
+Sem custas nem honorários de sucumbência nesta etapa processual, a teor do art. 55, da Lei n.º 9.099/95.
+
+Em caso de recurso, a ser interposto no prazo de 10 dias e, necessariamente, por advogado (artigo 41, §2º, Lei 9.099/1995), o recorrente deverá comprovar o recolhimento do preparo, em 48 horas a contar da interposição do recurso, sem nova intimação, devendo observar, quanto à comprovação, o disposto no artigo 1.093, caput e parágrafos, das Normas de Serviço da Corregedoria Geral de Justiça, tudo sob pena de deserção (§4º). Caso o recurso seja negado, o recorrente poderá ser condenado ao pagamento de honorários advocatícios (artigo 55, segunda parte, Lei nº 9.099/1995).
+
+O preparo para recurso é de R$ 290,90.
+
+PRIC e oportunamente arquive-se.
+
+
+
+Sorocaba,16 de abril de 2021.
+
+
+
+     Tamar Oliva de Souza Totaro  
+
+		Juíza de Direito
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>5&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="0B0016NIA0000-11-PG5REG-115681902" >
+									<span class="fonteNegrito"> 1010694-80.2020.8.26.0011 </span>
+								</a>
+								<a name="0B0016NIA0000-11-PG5REG-115681902" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Rescisão do contrato e devolução do dinheiro
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> Henrique Vergueiro Loureiro
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> SÃO PAULO
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro Regional XI - Pinheiros
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> 1ª Vara do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 23/02/2021
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... pertencente ao recorrente, no jogo online <em>League</em> <em>of</em> <em>Legends</em>, que após quatro anos de uso, foi banida por uso de programas maliciosos ou modificação no jogo. O recorrente alegou não ter recebido nenhuma notificação ou alerta sobre o possível banimento, bem como não ter utilizado meio fraudulento algum para obter vantagens indevidas no jogo. Diante das provas ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de SÃO PAULO
+
+Foro Regional XI - Pinheiros
+
+1ª Vara do Juizado Especial Cível
+
+Rua Jericó s/nº, São Paulo-SP - cep 05435-040
+
+Horário de Atendimento ao Público: das 12h30min às18h00min
+
+
+
+															1010694-80.2020.8.26.0011 - lauda 
+
+SENTENÇA
+
+
+
+Processo Digital nº:
+
+1010694-80.2020.8.26.0011
+
+Classe – Assunto:
+
+Procedimento do Juizado Especial Cível - Rescisão do contrato e devolução do dinheiro
+
+Requerente:
+
+Julio Cesar Yanasse Matsuzawa
+
+Requerido:
+
+Activision Blizzard Brasil Promoções Ltda.
+
+
+
+
+
+
+
+
+
+Juiz(a) de Direito: Dr(a). Henrique Vergueiro Loureiro
+
+
+
+
+
+Vistos.
+
+
+
+Considerando-se a possibilidade de as partes se contatarem diretamente para tentativa de transação (e não ter sido noticiada transação até o momento), buscando dar celeridade ao processo nesse cenário de Pandemia do Covid-19 (coronavírus) e não havendo elementos que indiquem a necessidade da produção de provas em audiência, deixo excepcionalmente de designar audiência, passando ao julgamento dos pedidos.
+
+Dispensado o relatório, fundamento e decido.
+
+Afasto as preliminares arguidas pois a Requerida tem – ao menos em tese – legitimidade para figurar no polo passivo da demanda. Ainda, desnecessária a produção de prova pericial, diante dos elementos existentes nos autos e da ausência de manifestação do Autor em réplica.  
+
+Os pedidos são improcedentes.
+
+Sustenta o Autor que é usuário e consumidor do jogo “Call <em>Of</em> Duty – Warzone”; que já despendeu 214 horas nesse jogo, derrotando mais de 6 mil usuários; que no dia 01.10.2020, sem justificativa, teve sua conta suspensa pela Requerida. Requer o restabelecimento da conta ou, subsidiariamente, a restituição das quantias pagas pelos jogos, além de compensação pelo dano moral sofrido. 
+
+O Requerido, em contestação, alega que a conta foi suspensa pois – em rastreamento efetuado por software da empresa – foi constatada a utilização de programa irregular pelo Autor (fls. 95/96 e 99), denominado “Xmodus”; que referido programa traz diversos benefícios indevidos aos jogadores (no “Call <em>Of</em> Duty”) tais como melhorias na mira, visão por detrás de paredes, localização de outros jogadores em tempo real, para obter vantagem injusta na partida online. 
+
+Regularmente intimado a se manifestar sobre a contestação e documentos, o Autor quedou-se inerte (fls.162 e 165). 
+
+Pois bem. O Requerido, em contestação, indicou a exata localização do programa "Xmodus" no computador do Autor (fls. 96 e 99), após a noticiada varredura efetuada por software da mantenedora do jogo. O Autor, intimado, não se manifestou. 
+
+Desta feita, verifica-se que a Requerida exerceu regularmente um direito (exclusão de usuário que utilizava programa não admitido, que lhe conferia vantagem indevida e descumpria os termos e condições de uso, fls. 123 e ss. e 148 e ss.) para preservar ambiente de justiça na disputa online travada entre os milhares/milhões de usuários. 
+
+Aliás, os documentos de fls. 152 e ss. comprovam que o programa “Xmodus” viabiliza vantagem – não autorizada nos termos e condições de uso (fls. 123 e ss. e 148 e ss.) - aos competidores. 
+
+Nesse cenário, não há elementos que indiquem a prática de ato ilícito pelo Requerido (art. 188 do Código Civil), 
+
+Nesse sentido já decidiram nossos Tribunais: 
+
+“AGRAVO DE INSTRUMENTO. AÇÃO OBRIGAÇÃO DE FAZER. RELEVÂNCIA DA FUNDAMENTAÇÃO. AUSÊNCIA. INDÍCIOS DE QUE O AGRAVANTE SE UTILIZAVA DE PROGRAMAS QUE OFERECIAM VANTAGEM INDEVIDA NO AMBIENTE DE JOGO VIRTUAL.APARENTE QUEBRA DAS NORMAS DE CONDUTA, APTA A ENSEJAR O BANIMENTO DO SISTEMA. RECEIO DE INEFICÁCIA DO PROVIMENTO FINAL. INEXISTÊNCIA.POSSIBILIDADE DE RESTABELECIMENTO DO STATUS QUO EM SEDE DE COGNIÇÃO EXAURIENTE. AGRAVO DE INSTRUMENTO NÃO PROVIDO. (TJ-PR - AI: 14233862 PR 1423386-2 (Acórdão), Relator: Vitor Roberto Silva, Data de Julgamento: 09/12/2015, 18ª Câmara Cível, Data de Publicação: DJ: 1727 26/01/2016)
+
+“Ação indenizatória. Preliminares. Ausência de dialeticidade. Inovação recursal. Rejeitadas. Jogo online. Banimento de conta. Regras de conduta. Descumprimento. Comprovado. Ônus probatório. Improcedência. Mantida. Honorários recursais. Majoração de ofício. Demonstrada a pretensão do recorrente em alterar a decisão que lhe foi desfavorável, não há ofensa ao princípio da dialeticidade. Extraindo-se das razões recursais que a pretensão da parte foi ventilada em primeiro grau, não se configura inovação recursal. Comprovado que o banimento da conta on line foi legal, em virtude do descumprimento das regras de conduta do jogo, que eram de conhecimento do autor, não tendo este demonstrado minimamente a verossimilhança das suas alegações, a manutenção da improcedência dos pedidos é medida que se impõe. Aplica-se à sentença proferida após a entrada em vigor do novo CPC a regra estampada no art. 85, § 11, do CPC/2015, para majorar os honorários sucumbenciais em sede recursal”. (TJ-RO - AC: 70033101020178220001 RO 7003310-10.2017.822.0001, Data de Julgamento: 22/10/2019)
+
+“Não obstante as razões lançadas no recurso, com base no disposto no artigo 46 da Lei n. 9099/95, confirmo a sentença recorrida pelos seus próprios e bem lançados a fundamentos. Na lide em questão, discutia-se a respeito de uma conta pertencente ao recorrente, no jogo online <em>League</em> <em>of</em> <em>Legends</em>, que após quatro anos de uso, foi banida por uso de programas maliciosos ou modificação no jogo. O recorrente alegou não ter recebido nenhuma notificação ou alerta sobre o possível banimento, bem como não ter utilizado meio fraudulento algum para obter vantagens indevidas no jogo. Diante das provas produzidas em contraditório judicial, é notório que a conduta do recorrente violou os termos de uso do jogo online pertencente à recorrida, o que torna legitima a punição aplicada pela mesma, ou seja, o banimento da conta. Assim, NEGO PROVIMENTO AO RECURSO. Condeno o recorrente ao pagamento de custas processuais e honorários advocaticios de 10% (dez por cento) sobre o valor da causa, suspensa a exigibilidade, nos termos do art. 98, '53° do CPC” (TJ-MG 01928645920178130672 MG, Relator: CARLOS EDUARDO VIEIRA GONCALVES, Turmas Recursais, Data de Publicação: Data da publicação: 28/03/2019).
+
+“RECURSO INOMINADO - AÇÃO DE OBRIGAÇÃO DE FAZER C/C INDENIZAÇÃO POR DANOS E MATERIAIS - BANIMENTO DE CONTA EM FÓRUM DE JOGO ELETRÔNICO - DESCUMPRIMENTO DO CÓGIDO DE CONDUTA - AUSÊNCIA DO DEVER DE INDENIZAR - IMPROCEDÊNCIA DO PEDIDO - SENTENÇA MANTIDA POR SEUS PRÓPRIOS FUNDAMENTOS. Recurso conhecido e desprovido. Ante o exposto, esta Turma Recursal resolve, por unanimidade de votos, CONHECER e NEGAR PROVIMENTO ao recurso interposto, nos exatos termos deste voto (TJ-PR - RI: 001493490201481601820 PR 0014934-90.2014.8.16.0182/0 (Acórdão), Relator: FERNANDA DE QUADROS JORGENSEN GERONASSO, Data de Julgamento: 11/04/2016, 1ª Turma Recursal, Data de Publicação: 14/04/2016)
+
+Desta feita, respeitando-se o entendimento do Autor, evidenciado o exercício regular do direito do Requerido (art. 188 do Código Civil) em prol da disputa justa e equilibrada em jogo online, os pedidos descritos na inicial devem ser rejeitados.  . 
+
+Ante o exposto, julgo improcedentes os pedidos deduzidos na petição inicial, resolvendo-se o mérito, nos termos do art. 487, I do CPC. 
+
+Sem custas ou honorários advocatícios, na forma do art. 55 da lei 9099/95.
+
+As partes poderão interpor recurso inominado contra esta sentença, no prazo de 10 (dez) dias, por meio de advogado, mediante o pagamento do preparo recursal, na forma do art. 42 da Lei Federal 9.099/95 e do art. 4º. da Lei Estadual nº 11.608/2003.  O preparo recursal corresponde ao valor de R$ 290,90 ((artigo 4º, inciso II, Lei 11.608/2003, alterada pela Lei 15.855/2015), dispensado o recolhimento do porte de remessa e retorno em razão do Provimento CSM 2195/2014."
+
+
+
+
+
+São Paulo, 18 de fevereiro de 2021.
+
+
+
+
+
+
+
+
+
+DOCUMENTO ASSINADO DIGITALMENTE NOS TERMOS DA LEI 11.419/2006, CONFORME IMPRESSÃO À MARGEM DIREITA
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>6&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="F10001NHV0000-541-PG5ARCT-75535646" >
+									<span class="fonteNegrito"> 1004912-88.2019.8.26.0541 </span>
+								</a>
+								<a name="F10001NHV0000-541-PG5ARCT-75535646" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento Comum Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Jogos / Sorteios / Promoções comerciais
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> MARIA PAULA BRANQUINHO PINI
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> Santa Fé do Sul
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro de Santa Fé do Sul
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> 2ª Vara
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 16/06/2020
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... em resumo, que é usuário do jogo <em>League</em> <em>of</em> <em>Legends</em>, oferecido pela requerida de forma gratuita, com possibilidade de compra de créditos para mais ferramentas. Explicou que gastou mais de R$ 3.000,00 (três mil reais) ao longo de seis anos. O jogo comporta uma modalidade competitiva ou ranqueada, mais atrativa, envolvendo trabalho em equipe e situações que não ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de Santa Fé do Sul
+
+Foro de Santa Fé do Sul
+
+2ª Vara
+
+Avenida Conselheiro Antonio Prado,  1662, Santa Fe do Sul - SP - cep 15775-000
+
+Horário de Atendimento ao Público: das 12h30min às19h00min
+
+      											
+
+1004912-88.2019.8.26.0541 - lauda 
+
+SENTENÇA
+
+
+
+Processo Digital nº:
+
+1004912-88.2019.8.26.0541
+
+Classe - Assunto
+
+Procedimento Comum Cível - Jogos / Sorteios / Promoções comerciais
+
+Requerente:
+
+Wagner de Souza Ramos
+
+Requerido:
+
+Riot Games Serviços Ltda (Riot Games)
+
+
+
+Juiz(a) de Direito: Dr(a). MARIA PAULA BRANQUINHO PINI
+
+
+
+Vistos.
+
+WAGNER DE SOUZA RAMOS, qualificado nos autos, ajuizou a presente ação de obrigação de fazer em face de RIOT GAMES SERVIÇOS LTDA, alegando, em resumo, que é usuário do jogo <em>League</em> <em>of</em> <em>Legends</em>, oferecido pela requerida de forma gratuita, com possibilidade de compra de créditos para mais ferramentas. Explicou que gastou mais de R$ 3.000,00 (três mil reais) ao longo de seis anos. O jogo comporta uma modalidade competitiva ou ranqueada, mais atrativa, envolvendo trabalho em equipe e situações que não dependem apenas do indivíduo. Ressaltou que, diante disso, alguns usuários realizam comentários machistas, xingamentos infantis e outras ofensas. Aduziu que, diante da situação, não aguentou a pressão e, por ser impulsivo, solicitou a exclusão da conta. Todavia, após se arrepender da conduta, contatou a requerida para voltar a jogar, mas foi informado que não poderia mais ter acesso à conta, pois já estava excluída. Argumentou, entretanto, que ainda é possível acessar suas informações no game, de modo que a conta está apenas suspensa. Requereu, desta forma, a declaração de nulidade das cláusulas 2.2, 13 e 15 dos termos de uso do jogo, bem como a procedência dos pedidos da ação, a fim de condenar a requerida ao pagamento dos valores que gastou com o jogo ou, alternativamente, ao restabelecimento do acesso à conta. 
+
+Com a inicial, os documentos (fls. 16/29).
+
+Devidamente citada (fls. 32), a parte requerida apresentou contestação (fls. 34/62), alegando, em resumo, que o usuário, para jogar, precisa aceitar os termos de uso. Explicou que o jogo é gratuito e as formas de sistemas envolvidos. Ressaltou que a aquisição de Riot Points não é requisito para usufruir de todos os modos de jogo. Apresentou impugnação à justiça gratuita. Aventou que a conta foi excluída a pedido do próprio usuário, não havendo o que se falar em ato ilícito e, tampouco, em restabelecimento da conta. Por fim, argumentou a impossibilidade de restituição dos valores, pois o serviço foi prestado. Requereu a condenação do autor em litigância de má-fé e, ao final, a improcedência dos pedidos da ação. Juntou documentos (fls. 63/111).
+
+Réplica (fls. 117/128). Juntou novos documentos (fls. 129/135).
+
+Instadas acerca da produção de provas (fls. 136), as partes requereram o julgamento antecipado do feito (fls. 137/141 e 143).
+
+Vieram-me conclusos.   
+
+É o relatório.
+
+Fundamento e decido.
+
+Por versar a presente ação sobre matéria de direito e de fato, em que é desnecessária a produção de provas em audiência, passo ao julgamento antecipado do pedido, por força do disposto no artigo 355, inciso I, do Código de Processo Civil. 
+
+Da impugnação ao pedido de justiça gratuita.
+
+A impugnação é improcedente.
+
+Na previsão do artigo 5°, inciso LXXIV da Constituição da República, "O Estado prestará assistência jurídica integral e gratuita aos que comprovarem insuficiência de recursos".
+
+Por sua vez, a Lei n.° 1.060/1950, segundo o entendimento do Supremo Tribunal Federal, e também do Superior Tribunal de Justiça, foi recepcionada pela Constituição Federal de 1988, no ponto que se contenta com a simples afirmação da parte "de que não está em condições de pagar as custas do processo e os honorários de advogado, sem prejuízo próprio ou de sua família" (artigo 4° da referida Lei). 
+
+Sabidamente, e até por disposição expressa (cf. §1° desse mesmo dispositivo), a presunção decorrente dessa "simples afirmação" é a juris tantum, admitindo-se, por isso, a produção de prova em contrário e, se o caso, indeferimento do requerimento de gratuidade, pelo juiz, desde logo, diante de outros elementos constantes dos autos. Porém, prova documental idônea alguma nesse sentido foi apresentada pelo impugnante, ônus que lhe incumbia (artigo 7° da Lei n.º 1.060/1950). 
+
+Dessa forma, não se vislumbra qualquer elemento de prova que fundamente o indeferimento da gratuidade concedida, notadamente diante dos documentos de fls. 129/135.
+
+Do mérito.
+
+No mérito, o pedido da ação é improcedente.
+
+Trata-se de ação na qual o autor almeja a declaração de nulidade das cláusulas 2.2, 13 e 15 dos termos de uso do jogo oferecido pela requerida, bem como a condenação da ré no pagamento dos valores que gastou com o game ou, alternativamente, o restabelecimento do acesso à conta.
+
+Para tanto, o autor explicou que, em momento de raiva e impulso, pediu o cancelamento da conta e que gastou cerca de R$ 3.000,00 ao longo de seis anos, jogando  o jogo da empresa requerida.
+
+A parte ré, em contrapartida, argumentou que o próprio requerente pediu o cancelamento da conta e que não há o que se falar em restituição das quantias pagas, uma vez que o serviço foi prestado e disponibilizado. 
+
+Pois bem.
+
+Consubstanciando os autos, verifica-se que, de acordo com os termos de uso do jogo, em caso de encerramento da conta, o usuário não terá mais acesso à plataforma, dado ou conteúdo relacionado, tampouco reembolso dos valores despendidos (vide documento de fls. 20, acostado aos autos pelo próprio requerente).
+
+O próprio autor aduziu, na peça vestibular, que pediu o cancelamento da conta, o que, de fato, foi feito pela requerida. Assim, não existe qualquer ato ilícito no caso em apreço, uma vez que a ré procedeu da forma como postulada pelo usuário do serviço.
+
+A cláusula que prevê as penalidades em caso de encerramento da conta (item 2  – fls. 20) não se mostra abusiva, tendo em vista que constitui termo de uso do serviço, que foi devidamente aceito pelo usuário quando decidiu jogar o game administrado pela ré. Constata-se, outrossim, que a cláusula foi redigida de forma clara e objetiva, não havendo o que se falar, desta forma, em nulidades.
+
+ No mesmo sentido, não se mostra abusiva a previsão dos itens 13 e 15 de fls. 25, uma vez que o autor, ao aceitar os termos e fazer uso do jogo, concordou com todas as disposições presentes. Além disso, verifica-se que a cláusula 13 prevê a responsabilidade do usuário pelo mau uso da plataforma cometido perante terceiros, enquanto a cláusula 15 estabelece a lei e o foro aplicável em caso de litígio judicial. Nenhum dos dispositivos afeta, diretamente, o autor no caso em análise, uma vez que se referem a regras em caso de procedimento judicial proposto pela parte ré.
+
+Não há, portanto, qualquer abusividade nas cláusulas mencionadas do termo de uso, de modo que inexiste nulidade a ser declarada. Repita-se que o jogo oferecido pela requerida é gratuito e o usuário, para usufruir do serviço, aceitou os termos de uso propostos, concordando e se responsabilizando pelas regras nele estabelecidas.
+
+Por outro lado, inexiste, também, o dever de restabelecimento da conta do autor ou restituição dos valores pagos.
+
+Com efeito, o próprio requerente pugnou pelo cancelamento da conta, o que foi devidamente realizado pela requerida (vide fls. 44). Na mesma oportunidade, foi informado ao autor que a exclusão da conta é permanente (fls. 45), com o que o requerente concordou.
+
+Nota-se, ainda, que foi dada a oportunidade ao autor de desativar temporariamente a conta, caso houvesse posterior arrependimento. Todavia, o demandante pugnou pelo cancelamento permanente, de modo que não pode querer se socorrer ao judiciário para ver seu propósito atendimento em descompasso com as normas estabelecidas, de forma clara e precisa, pela empresa requerida e com as quais concordou.
+
+No que se refere aos valores supostamente gastos, registra-se que o jogo é gratuito e foi escolha do próprio autor contratar mais opções de ferramentas, de modo que as quantias eventualmente pagas em favor da requerida foram revertidas em seu proveito quando da utilização do game. 
+
+Em outras palavras, os serviços foram devidamente prestados e não há, nos autos, alegações e nem provas de que a requerida não tenha disponibilizado, de forma adequada, as opções pagas pelo requerente.
+
+O cancelamento da conta não implica na devolução dos valores gastos, uma vez que o crédito foi usufruído pelo requerente enquanto jogava. Em síntese, a remuneração foi devida e o serviço foi disponibilizado. 
+
+Por fim, sem condenação em litigância de má-fé, pois ausentes os requisitos do artigo 80 do CPC.
+
+Posto isso, JULGO IMPROCEDENTES os pedidos deduzidos na presente ação. Em consequência, JULGO EXTINTO o feito, com resolução de mérito, tendo como fundamento o artigo 487, inciso I, do Código de Processo Civil. 
+
+Em razão da sucumbência, arcará a parte autora com as custas judiciais e as despesas processuais, bem como com os honorários advocatícios que, nos termos do artigo 85, §2º do Código de Processo Civil, arbitro no valor equivalente a 10% do valor da causa, observada a gratuidade concedida.
+
+Transitada em julgado, arquivem-se os autos, observando-se as formalidades legais. 
+
+P. I. C.
+
+Santa Fe do Sul, 16 de junho de 2020.
+
+
+
+DOCUMENTO ASSINADO DIGITALMENTE NOS TERMOS DA LEI 11.419/2006, CONFORME IMPRESSÃO À MARGEM DIREITA
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>7&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="7E00073GT0000-266-PG5SORC-60413812" >
+									<span class="fonteNegrito"> 1005608-76.2019.8.26.0266 </span>
+								</a>
+								<a name="7E00073GT0000-266-PG5SORC-60413812" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento do Juizado Especial Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Obrigação de Fazer / Não Fazer
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> Helen Cristina de Melo Alexandre
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> Itanhaém
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro de Itanhaém
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> Vara do Juizado Especial Cível e Criminal
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 02/12/2019
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... eletrônico para acesso ao jogo "<em>League</em> <em>of</em> <em>Legends</em>" e que, no dia 08/04/2019, teria sido banido do jogo porque teria utilizado programas de terceiros durante o acesso, bem como por ter cedido sua senha para um amigo, o que não seria permitido nos termos do contrato, com o que não concorda. Postula, assim, a reativação de sua conta e indenização por danos morais no ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de Itanhaém
+
+Foro de Itanhaém
+
+Vara do Juizado Especial Cível e Criminal
+
+Avenida Rui Barbosa, 867, Itanhaem-SP - cep 11740-000
+
+
+
+
+
+SENTENÇA 
+
+
+
+
+
+Processo nº:
+
+1005608-76.2019.8.26.0266 - Procedimento do Juizado Especial Cível
+
+Requerente:
+
+Marcelo de Almeida Fernandes Tropea
+
+Requerido:
+
+Riot Games Serviços Ltda
+
+
+
+Juiz(íza) de Direito: Dr(a). Helen Cristina de Melo Alexandre. 
+
+
+
+
+
+VISTOS.
+
+
+
+Relatório dispensado nos termos do artigo 38 da Lei nº 9.099/95.
+
+Fundamento e DECIDO.
+
+Trata-se de ação de obrigação de fazer c.c. indenização por danos morais, onde o autor, em apertada síntese, alega que contratou com a ré prestação de serviços mediante cadastro eletrônico para acesso ao jogo "<em>League</em> <em>of</em> <em>Legends</em>" e que, no dia 08/04/2019, teria sido banido do jogo porque teria utilizado programas de terceiros durante o acesso, bem como por ter cedido sua senha para um amigo, o que não seria permitido nos termos do contrato, com o que não concorda. Postula, assim, a reativação de sua conta e indenização por danos morais no valor de R$ 5.000,00 (cinco mil reais).
+
+O processo comporta o julgamento antecipado por versar unicamente sobre matéria de direito. É o que passo a fazer, consoante ao artigo 355, I, do Código de Processo Civil.
+
+Precipuamente, afasto a matéria de natureza preliminar arguida em sede de contestação, já que a complexidade da causa que afasta a competência desta Justiça Especializada apresenta-se quanto à matéria, e não em virtude da eventual necessidade de produção de prova de natureza pericial, sendo que em relação a essa, inexiste complexidade para o fim colimado.
+
+Em todo caso, a produção de prova técnica é desnecessária ao julgamento da ação, visto que a questão controvertida nos autos é meramente de direito.
+
+No mérito a ação é improcedente.
+
+Quanto ao pedido de inversão do ônus da prova, em que pese tratar-se de relação de consumo, é critério do julgador a decisão acerca da inversão em cada caso concreto, pois o ordenamento processual brasileiro adotou, no tocante a análise das provas, a teoria do livre convencimento motivado ou da persuasão racional do juiz (art. 370 e 371 do CPC), não havendo provas com valores pré-estabelecidos, deixando o magistrado com ampla liberdade na análise dos elementos de convicção trazidos aos autos pelas partes. 
+
+A existência da relação jurídica obrigacional entre as partes está devidamente comprovada nos autos, conforme documentos juntados e fatos narrados pelas partes, de onde se depreende que a parte autora confirmou que celebrou contrato com o réu, de forma que, ao firmá-lo pressupõe-se que tenha tomado conhecimento de todos os seus termos, dos quais, ademais, admite ter conhecimento, especialmente quanto à proibição de compartilhamento da senha individual e uso de programas de terceiros durante o acesso ao jogo. 
+
+Neste ponto, é importante mencionar que não há nos autos qualquer indício de que o autor esteja interditado ou possua enfermidade capaz de lhe retirar ou reduzir a capacidade de praticar os atos da vida civil sozinho, nem se entrevê qualquer nulidade no contrato, sendo certo que inexiste alegação de vício de consentimento, e sequer se vislumbra abusividade nas cláusulas que regem o pacto, já que, ademais, visam, sobretudo, à competição justa, proibindo, por tal motivo, o compartilhamento de senha, que põe em risco a segurança da competição, pois, uma vez que há quebra de sigilo de senha, abre-se um leque de possiblidades de burla às regras, já que não tem, o autor, como provar que a senha cedida não foi utilizada indevidamente ou, até mesmo, repassada, o que poderia causar efeito cascata de burla ao jogo, ônus que não se pode transferir ao réu, tampouco, pois estar-se-ia impondo a produção de uma prova diabólica, tornando a atuação processual impossível. 
+
+A conduta do autor deve ser repudiada, pois a ninguém é permitido beneficiar-se da sua própria torpeza. Leciona Carlos Roberto Gonçalves, ao exemplificar a aplicação do tu quoque, afirmando que "o condômino que viola regra do condomínio e deposita móveis em área de uso comum, ou a destina para uso próprio, não pode exigir do outro comportamento obediente ao preceito". (GONÇALVES, Carlos Roberto. DIREITO CIVIL BRASILEIRO. 9ª ed. Vol. 3. São Paulo: Editora Saraiva, 2012, p. 62).
+
+Ante o exposto, JULGO IMPROCEDENTE a presente ação movida por Marcelo de Almeida de Fernandes Tropea em face do Riot Games Serviços Ltda, nos termos do artigo 487, I, do Código de Processo Civil. 
+
+Sem custas, despesas processuais e honorários advocatícios, nos termos da Lei deste Juizado.
+
+P.R.I.C.
+
+Itanhaem, 29 de novembro de 2019.
+
+
+
+HELEN CRISTINA DE MELO ALEXANDRE,
+
+Juíza de Direito, assinando digitalmente.
+
+
+
+DOCUMENTO ASSINADO DIGITALMENTE NOS TERMOS DA LEI 11.419/2006, CONFORME IMPRESSÃO À MARGEM DIREITA 
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>8&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="0B0014SSW0000-100-PG5JM-74974293" >
+									<span class="fonteNegrito"> 1001412-86.2018.8.26.0011 </span>
+								</a>
+								<a name="0B0014SSW0000-100-PG5JM-74974293" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento Comum Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Indenização por Dano Material
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> Sang Duk Kim
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> SÃO PAULO
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro Central Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> 7ª Vara Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 20/11/2019
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... do Campeonato Brasileiro de <em>League</em> <em>of</em> <em>Legends</em> de 2018.
+
+Requer, assim, a condenação dos réus ao pagamento do montante correspondente à multa compensatória estipulada, a qual perfaz o valor atualizado de R$ 50.631,30.
+
+Em contestações apresentadas às fls. 104/116, 231/243 e 254/267, as demandadas sustentaram: a) a incompetência do juízo; b) não tiveram acesso ao ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de SÃO PAULO
+
+Foro Central Cível
+
+7ª Vara Cível
+
+Praça João Mendes s/nº, 7º andar - salas nº 707/709, Centro - CEP 01501-900, Fone: 2171-6096, São Paulo-SP
+
+      											
+
+1001412-86.2018.8.26.0011 - lauda 
+
+SENTENÇA
+
+
+
+Processo nº:
+
+1001412-86.2018.8.26.0011
+
+Classe - Assunto
+
+Procedimento Comum Cível - Indenização por Dano Material
+
+Requerente:
+
+Red Canids E-sport Club Ltda.
+
+Requerido:
+
+Clube de Regatas do Flamengo e outros
+
+
+
+Juiz(a) de Direito: Dr(a). Sang Duk Kim
+
+
+
+Vistos.
+
+RED CANIDS E-SPORT CLUB LTDA interpôs ação ressarcitória em face de CLUBE DE REGATAS DO FLAMENGO, CURSOR ESPORTS AGÊNCIA DE MARKETING LTDA e FELIPE GONÇALVES, alegando, em síntese, que: a) a autora celebrou contrato com o atleta, com vigência de 05/12/2016 a 20/11/2017; b) em outubro de 2017, as rés demonstraram interesse em contratar o jogador, oportunidade na qual propuseram, a título de cláusula penal indenizatória, o valor de R$ 50.000,00; c) após a concordância da demandante, em 13/11/2017, esta liberou o atleta para negociação imediata; d) apesar de ter encaminhado o contrato de transferência, os réus quedaram-se inertes em devolvê-lo assinado; e) as requeridas anunciaram a contratação do jogador no dia 07/12/2017, porém, sem o pagamento das obrigações assumidas com a autora; f) deixou de negociar com outros clubes que demonstraram interesse nos serviços para a temporada do Campeonato Brasileiro de <em>League</em> <em>of</em> <em>Legends</em> de 2018.
+
+Requer, assim, a condenação dos réus ao pagamento do montante correspondente à multa compensatória estipulada, a qual perfaz o valor atualizado de R$ 50.631,30.
+
+Em contestações apresentadas às fls. 104/116, 231/243 e 254/267, as demandadas sustentaram: a) a incompetência do juízo; b) não tiveram acesso ao contrato vigente; c) a inexistência de informação acerca do exíguo prazo pra o término do contrato; d) a transferência do atleta perdeu o objeto diante da extinção do vínculo estabelecido com a autora; e) a Lei 9.615/98 prevê que a cláusula indenizatória desportiva incide apenas durante a vigência do contrato especial de trabalho desportivo; f) a existência de vícios no contrato de transferência apresentado pela interessada; g) a pretensão de enriquecimento sem causa por parte da demandante.
+
+Réplica às fls. 300/310.
+
+Redistribuída a ação por conta do acolhimento da preliminar de incompetência, conforme se verifica em decisão de fl. 368.
+
+É o relatório.
+
+Fundamento e decido.
+
+A matéria em discussão é somente de direito e de fato, a qual dispensa produção de outras provas além das que estão acostadas aos autos. Assim, com fundamento no artigo 355, inciso I, do Código de Processo Civil, passo a proferir sentença.
+
+Como a preliminar de incompetência do juízo restou apreciada em decisão anterior, culminando na redistribuição da demanda, e estando ausentes outras questões processuais pendentes, prossigo com o exame do mérito.
+
+Em suma o autor pretende ser ressarcido dos valores estipulados a título de cláusula penal indenizatória, ao argumento de que as partes teriam combinado a transferência do atleta mediante tratativas anteriores ao término do ajuste que mantinha com o jogador Felipe Gonçalves “brTT”.
+
+Compulsando detidamente os autos, afere-se que as partes não chegaram a celebrar o contrato de transferência do atleta, restringindo-se ao envio de propostas para negociação, porém, sem vinculação formalizada.
+
+Ainda que deva ser observado o preceito da boa-fé em momento anterior ao pacto, constata-se que a autora procedeu em omissão dolosa, por não informar ao clube sobre a duração do contrato vigente.
+
+O artigo 147 do Código Civil dispõe que “nos negócios jurídicos bilaterais, o silêncio intencional de uma das partes a respeito de fato ou qualidade que a outra parte haja ignorado, constitui omissão dolosa, provando-se que sem ela o negócio não se teria celebrado”.
+
+Decerto que, como o contrato anterior findaria em 20/11/2017, as empresas contratantes não teriam interesse em assinar qualquer ajuste para transferência do atleta no dia 13/11/2017 (fl. 52).
+
+Somado a isso, afere-se que a temporada do Campeonato Brasileiro de <em>League</em> <em>of</em> <em>Legends</em> iniciaria tão somente no ano de 2018, quando não haveria mais vínculo com a autora, de modo a inexistir direito ao passe do esportista, ainda que respaldado em anterior contrato especial de trabalho desportivo (artigo 28, I, da Lei 9.615/98).
+
+Ademais, a autora não demonstrou a participação do jogador em clube diverso concomitantemente à vigência do ajuste de fls. 29/40, quedando-se inerte, outrossim, em apontar quaisquer perdas e danos decorrentes das propostas que não chegaram a ser concluídas.
+
+Ante o exposto, JULGO a presente ação IMPROCEDENTE, nos termos do arts. 487, I, e 488 do CPC/15.
+
+Em razão da sucumbência, condeno a autora ao pagamento de custas, despesas processuais e honorários advocatícios, que ora arbitro em 10% sobre o valor da causa.
+
+P. I.
+
+São Paulo,  18/11/2019.
+
+
+
+ 		SANG DUK KIM
+
+ 		 JUIZ DE DIREITO
+
+		  (Assinado digitalmente)
+
+
+
+
+
+DOCUMENTO ASSINADO DIGITALMENTE NOS TERMOS DA LEI 11.419/2006, CONFORME IMPRESSÃO À MARGEM DIREITA
+
+
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>9&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="02001NCKM0000-100-PG5JM-73180406" >
+									<span class="fonteNegrito"> 1065126-47.2018.8.26.0002 </span>
+								</a>
+								<a name="02001NCKM0000-100-PG5JM-73180406" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento Comum Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Direito Autoral
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> Gisele Valle Monteiro da Rocha
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> SÃO PAULO
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro Central Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> 11ª Vara Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 13/09/2019
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... assíduo jogador do jogo eletrônico <em>League</em> <em>of</em> <em>Legends</em>, narra que desenvolveu um novo personagem para o jogo e encaminhou a ideia de sua criação ao réu no dia 09/11/2016 (fls. 26), descrevendo-se o nome do personagem e habilidades que seriam implementadas (Jhef - a sombra do abismo). No dia 10/11/2016, a parte ré lhe enviou uma resposta (fls. 27) agradecendo o autor ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+
+
+TRIBUNAL DE JUSTIÇA DO ESTADO DE SÃO PAULO
+
+COMARCA de SÃO PAULO
+
+Foro Central Cível
+
+11ª Vara Cível
+
+Praça João Mendes s/nº, São Paulo - SP - cep 01501-900
+
+Horário de Atendimento ao Público: das 12h30min às19h00min
+
+      											
+
+1065126-47.2018.8.26.0002 - lauda 
+
+SENTENÇA
+
+
+
+Processo Digital nº:
+
+1065126-47.2018.8.26.0002
+
+Classe - Assunto
+
+Procedimento Comum Cível - Direito Autoral
+
+Requerente:
+
+Pedro Lucas Teodorio da Silva
+
+Requerido:
+
+Riot Games Serviços Ltda (Riot Games)
+
+
+
+
+
+
+
+
+
+Justiça Gratuita
+
+
+
+
+
+
+
+
+
+Juiz(a) de Direito: Dr(a). Gisele Valle Monteiro da Rocha
+
+
+
+
+
+Vistos.
+
+
+
+Trata-se de AÇÃO DECLARATÓRIA, com pedido de obrigação de fazer e indenização por direitos morais e patrimoniais, proposta por P.L.T.S, representado por seu genitor Mário Luiz da Silva em face de RIOT GAMES SERVIÇOS LTDA. O autor, assíduo jogador do jogo eletrônico <em>League</em> <em>of</em> <em>Legends</em>, narra que desenvolveu um novo personagem para o jogo e encaminhou a ideia de sua criação ao réu no dia 09/11/2016 (fls. 26), descrevendo-se o nome do personagem e habilidades que seriam implementadas (Jhef - a sombra do abismo). No dia 10/11/2016, a parte ré lhe enviou uma resposta (fls. 27) agradecendo o autor por sua ideia, contudo, negando o aceite à sugestão de criação por questões legais. Ocorre que após oito meses de envio da proposta, a parte ré lançou no mercado o personagem denominado "Kayn – O ceifador das sombras" (fls. 33/38), cujo o autor alega que possui a mesma essência, alma e originalidade do personagem criado pelo autor. Alega que o réu inseriu em seu jogo personagem desenvolvido pelo autor, contudo sem autorização, usurpando sua ideia criativa. Pede pelos benefícios da justiça gratuita e pela aplicação da lei de Direitos Autorais. Requer o seu reconhecimento como autor  ou coautor do personagem Kayn, o Ceifador das Sombras; a condenação do réu para conferir ao autor os créditos da autoria ou coautoria em todos os meios físicos e digitais de divulgação e reprodução do personagem Kayn, com a inclusão de errata nos exemplares ainda não distribuídos, bem como, a comunicação em destaque em todos os canais e plataformas existentes de divulgação e reprodução do personagem da autoria ou coautoria do autor; A condenação do réu ao pagamento de indenização a título de danos morais no importe de R$ 50.000,00 (cinquenta mil reais), nos termos do artigo 292; A condenação do réu ao pagamento de indenização a título de danos materiais no importe mínimo de 50% (cinquenta por cento) do valor obtido com a venda/reprodução/ utilização do produto (game) a partir da data da inclusão no jogo/lançamento do personagem (12/07/2017) e até perdurar a exploração econômica da respectiva obra pelo Réu; a determinação ao Réu de exibição de relatório contábil fidedigno que demonstre o valor lucrado por este com a venda/exploração do personagem do Autor; Atribuiu à causa o valor de R$ 50.000,00 e trouxe aos autos os documentos de fls. 22/96.
+
+
+
+O feito foi originalmente distribuído perante o juízo de Santo Amaro (fls. 97), sendo redistribuído a este juízo por razão da competência territorial (fls. 100).
+
+
+
+A decisão de fls. 143/144 concedeu ao autor os benefícios da gratuidade de justiça.
+
+
+
+Houve tentativa de conciliação preliminar (fls. 172/173), infrutífera.
+
+
+
+A requerida apresentou sua contestação (fls. 190/241). De forma preliminar, pede pela tramitação do feito em segredo de justiça. Também apresenta sua impugnação à gratuidade de justiça concedida ao autor e impugnação ao valor da causa. A requerida nega que se utilizou da sugestão do autor para a criação do personagem Kayn, pois afirma que o processo de criação já estava em vias de ser finalizado no momento em que o autor enviou sua sugestão. Alega que o time de criadores dos personagens sequer se encontram situados em solo brasileiro e estes não possuem contato com as sugestões de atendimento dos clientes brasileiros (fls. 262/263).  Esclarece que se trata de uma prestadora de serviços para a matriz norte americana, se limitando a oferecer suporte ao publico brasileiro, sem qualquer participação quanto ao processo criativo ou conceitual de personagens.  Discorre que o processo de criação de um personagem leva em cerca de dois anos desde o surgimento da ideia até o lançamento no mercado e que as primeiras ideias de criação do personagem Kayn surgiram no inicio de 2010. Apresenta ao juízo a cronologia de criação do personagem e discorre sobre o processo de desenvolvimento (vide fls. 204/207).  Discorre também sobre as diferenças entre o personagem Jhef criado pelo autor e o personagem Kayn criado pela ré, que abarcam desde as habilidades até o sistema de movimentação do personagem.  Discorre que as ideias manifestadas pelo Autor em sua comunicação à Riot não são protegidas na forma da legislação autoral vigente (Lei 9.610/98), que exclui por completo em seu artigo 8º, I a proteção de ideias de seu escopo e que o autor nada mais fez do que apresentar um conjunto de ideias obtidas de diferentes fontes para uma apresentação genérica e superficial de um personagem, destituídas de qualquer caráter individualizador capaz de atribuir originalidade aos seu resultado final. Discorre que vários personagens, tanto da cultura gamer quanto do próprio jogo <em>League</em> <em>of</em> <em>Legends</em> possuem as mesmas características da sugestão enviada pelo autor. Discorre que o autor estava ciente dos termos de serviço e que se cadastrou com idade diversa à sua idade real. Apresenta sua impugnação aos pedidos indenizatórios. Pede pela improcedência total dos pedidos, ou, subsidiariamente, o afastamento dos pedidos indenizatórios e sobre o pedido de conferir créditos. Trouxe aos autos os documentos de fls. 242/369.
+
+
+
+A tramitação em segredo de justiça foi indeferida pela decisão de fls. 188/189, deferindo-se a juntada dos documentos como classificação sigilosa. 
+
+
+
+Houve réplica (fls. 376/387).
+
+
+
+À especificação de provas (fls. 388), a parte ré pediu pelo pronto julgamento da lide, ou, subsidiariamente, pela produção de prova oral (fls. 391/393), ao passo em que o autor pediu pela produção de prova oral e pericial (fls. 396/397).
+
+
+
+Houve manifestação do Ministério Público (fls. 400/401) pedindo pela produção das provas requeridas pela parte autora.
+
+
+
+Houve a juntada de novas provas relativas à gratuidade de justiça do autor (fls. 406/411), com manifestação da requerida (fls. 419/421).
+
+
+
+É O RELATÓRIO.
+
+
+
+FUNDAMENTO E DECIDO.
+
+
+
+O processo comporta julgamento antecipado, nos termos do artigo 355, inciso I, do Código de Processo Civil, vez que desnecessária a produção de outras provas, havendo elementos nos autos que já permitem formar convencimento acerca do mérito da demanda. 
+
+
+
+Neste sentido: “Constantes dos autos elementos de prova documental suficientes para formar o convencimento do julgador, inocorre cerceamento de defesa, se julgada antecipadamente a controvérsia”. (STJ. Ag. 14.952-DF-AgRg. 4ª Turma. Rel. Min. Sálvio de Figueiredo. J. 04.12.91, negaram provimento, v.u., DJU 03.02.92, p. 472).
+
+
+
+O juiz é o destinatário das provas e julgará a demanda norteado pelo princípio do livre convencimento fundamentado, insculpido no art. 371 do CPC, nas lições de Jônatas Luiz Moreira de Paula: “(...) Princípio da Persuasão Racional ou Livre convencimento: é regra basilar no direito processual a independência intelectual do juiz ante sua interpretação dos fatos e das normas jurídicas, a fim de construir sua convicção jurídica. Essa independência é expressada pelo princípio enfocado e, segundo, José Frederico Marques, situa-se entre o sistema da certeza legal e o sistema do julgamento segundo a consciência íntima, exigindo-se do julgador pesar o valor das provas que lhe parece mais acertado, dentro de uma motivação lógica que deve ser exposto na decisão. (MOREIRA DE PAULA, Jônatas Luiz. Teoria Geral do Processo. Ed. Editora de Direito, 2. ed. Leme, São Paulo: 2000, pp 291-292) 
+
+
+
+É o caso dos autos, vez que desnecessária dilação probatória, pois os pontos controvertidos se tratam de questões exclusivamente de direito, e a prova oral não possui o  condão de trazer quaisquer esclarecimentos necessários ao deslinde da demanda. Destarte, perfeitamente cabível que se julgue antecipadamente o mérito, sem olvidar que compete à esta magistrada, na esteira do disposto pelo artigo 139, inciso II, do Código de Processo Civil, velar pela duração razoável do processo.
+
+
+
+Note-se que o feito sequer carece de produção de prova pericial, conforme será abordado ao longo dessa sentença.
+
+
+
+Não há falar em cerceamento de defesa em face do julgamento antecipado da lide, uma vez que a matéria controvertida permitia ampla formação do convencimento judicial, através das provas documentais e demais elementos objetivos existentes nos autos.
+
+
+
+Regra o artigo 130, do CPC, que "Caberá ao juiz, de ofício ou a requerimento da parte, determinar as provas necessárias à instrução do processo, indeferindo as diligências inúteis ou meramente protelatórias".
+
+
+
+Vale dizer, o juiz está obrigado a abrir a fase instrutória se presentes fatos controvertidos, pertinentes e relevantes, ou ainda, com contorno de inverossímeis, passíveis de produção probatória, à luz das circunstâncias do caso concreto e da necessidade de não ofender o princípio basilar do pleno contraditório.
+
+
+
+No entanto, o Juiz não está obrigado a produzir todas as provas requeridas pelas partes, caso aquelas existentes nos autos sejam suficientes para formar sua convicção. Vale observar, ademais, que o apelante sequer declina fundadas razões para anulação do processado pela mitigação do direito probatório, e tampouco explana de maneira convincente qual o desiderato da prova técnica que pretendia produzir.
+
+
+
+Da impugnação à gratuidade de justiça concedida em fls. 143/144 em favor do autor.
+
+
+
+Vale destacar que o benefício não é reservado aos que vivem na pobreza absoluta, mas pode ser outorgado àqueles que teriam dificuldade de litigar em juízo sem prejuízo da manutenção da família, de seu próprio sustento ou de suas atividades. 
+
+
+
+A presunção "juris tantum" afirmada pela parte autora, e que embasou a benesse às fls. 143, poderia ser afastada caso as rés apresentassem provas inequívocas da sua possibilidade financeira. 
+
+
+
+No entanto, a ré não trouxe aos autos provas efetivas e atuais de que o autor reúne condições financeiras, limitando-se a alegar que o autor possui R$ 100,00 para gastar com itens cosméticos em seu jogo e que o genitor do autor possui empresa em seu nome. 
+
+
+
+Contudo, conforme dito alhures, o benefício não é reservado a quem vive em estado absoluto de miserabilidade e os próprios documentos de fls. 106/134 dão conta de demonstrar a hipossuficiencia financeira dos genitores do autor.
+
+
+
+De mais a mais, o benefício poderá ser revogado em momento oportuno, caso seja comprovado a existência de bens em nome da parte autora, mediante as consultas via sistemas informatizados. 
+
+
+
+Neste sentido: 
+
+
+
+“Justiça gratuita - Impugnação - Benefício da gratuidade da justiça concedido mediante análise da declaração de imposto de renda do impugnado - Benefício que deve subsistir - Declaração de pobreza firmada nos termos da Lei 1.060/50, sobre a qual pesa a presunção de veracidade, não elidida pela parte contrária - Fotos extraídas pela impugnante das redes sociais que não bastam para infirmar a declaração de insuficiência de recursos - Indicação de advogado pelo impugnado que não suprime o seu direito à justiça gratuita - Mantida a rejeição da impugnação - Apelo da impugnante desprovido.” (TJSP, Apelação nº 0033757-34.2014.8.26.0506, 23ª Câmara de Direito Privado, Rel. Des. JOSÉ MARCOS MARRONE, j. 14/12/2016, DJe 23/01/2017). 
+
+
+
+“IMPUGNAÇÃO AO BENEFÍCIO DA JUSTIÇA GRATUITA. Sentença de improcedência. Irresignação do impugnante. Não acolhimento. Benefício outrora concedido não restou desconstituído pelas alegações da impugnante. Se de um lado a prova da necessidade cabe a quem pleiteia o benefício (art. 5º, LXXXIV, da CF), de outro lado, em autos de impugnação, a prova da suficiência financeira é ônus do impugnante (art. 7º da Lei 1.060/50). Propriedade de veículo usado, de valor modesto, não é suficiente para a revogação do benefício. Precedente. Decisão mantida. RECURSO IMPROVIDO.” (TJSP, Apelação nº 0005466-79.2014.8.26.0132, 24ª Câmara de Direito Privado, Rel. Des. SILVIA MARIA FACCHINA ESPÓSITO MARTINEZ, j. 15/09/2016, DJe 05/10/2016). 
+
+
+
+Dessa forma e à míngua de demais elementos que comprovem o contrário, mantenho os benefícios da gratuidade de justiça concedidos ao autor. 
+
+
+
+
+
+Da impugnação ao valor da causa.
+
+
+
+O valor da causa, enquanto instituto de Direito Processual, possui a finalidade de definir competências e ritos processuais.
+
+
+
+Entretanto, em sede de Direito Tributário, reflete a base de cálculo da taxa judiciária, na medida em que a prestação de serviços judiciários é específica e divisível, nos termos do artigo 77, da Lei nº 5.172, de 25 de outubro de 1966 (Código Tributário Nacional):
+
+
+
+“Art. 77. As taxas cobradas pela União, pelos Estados, pelo Distrito Federal ou pelos Municípios, no âmbito de suas respectivas atribuições, têm como fato gerador o exercício regular do poder de polícia, ou a utilização, efetiva ou potencial, de serviço público específico e divisível, prestado ao contribuinte ou posto à sua disposição.
+
+Parágrafo único. A taxa não pode ter base de cálculo ou fato gerador idênticos aos que correspondam a impôsto nem ser calculada em função do capital das emprêsas.”
+
+
+
+Ora, se os serviços judiciários são remunerados por taxas, não é o benefício econômico em si sua base de cálculo – exceto em termos subsidiários, para as hipóteses em que este aspecto quantitativo da taxa não foi previsto especificamente – mas o valor dos serviços.
+
+
+
+Pensar que o Juiz pode alterar a base de cálculo do tributo é desvirtuar a sistemática tributária, tornando o Juiz verdadeiro legislador (positivo) em afronta ao princípio da tripartição dos poderes (art. 2º, CR).
+
+
+
+Mais do que isso, é convolar a base de cálculo da taxa judiciária em base de cálculo de imposto, no sentido de que pagará por aquilo que pretende receber, que representada verdadeira base de cálculo do imposto sobre a renda (art. 43, inc. II, CTN).
+
+
+
+Além disso, não se pode olvidar do texto do artigo 110, do Código Tributário Nacional, que permite a manipulação de conceitos privados pelo sobredireito tributário, salvo quando previstos na Constituição da República, dos Estados ou na Lei Orgânica dos Municípios:
+
+
+
+“Art. 110. A lei tributária não pode alterar a definição, o conteúdo e o alcance de institutos, conceitos e formas de direito privado, utilizados, expressa ou implicitamente, pela Constituição Federal, pelas Constituições dos Estados, ou pelas Leis Orgânicas do Distrito Federal ou dos Municípios, para definir ou limitar competências tributárias.”
+
+
+
+A manipulação da base de cálculo pelo Poder Judiciário configuraria verdadeira renúncia a receita ou remissão de parcela tributária que, aos olhos deste Magistrado, não se coaduna com o sistema jurídico Constitucional e Constitucional Tributário.
+
+
+
+Tratar-se-ia de violação ao §1º, do artigo 14, da Lei Complementar nº 101, de 4 de maio de 2000:
+
+
+
+“Art. 14. A concessão ou ampliação de incentivo ou benefício de natureza tributária da qual decorra renúncia de receita deverá estar acompanhada de estimativa do impacto orçamentário-financeiro no exercício em que deva iniciar sua vigência e nos dois seguintes, atender ao disposto na lei de diretrizes orçamentárias e a pelo menos uma das seguintes condições:
+
+(...)
+
+§1º A renúncia compreende anistia, remissão, subsídio, crédito presumido, concessão de isenção em caráter não geral, alteração de alíquota ou modificação de base de cálculo que implique redução discriminada de tributos ou contribuições, e outros benefícios que correspondam a tratamento diferenciado.
+
+(...)”
+
+
+
+Note-se, ademais, que na forma da Lei Complementar nº 35, de 14 de março de 1979 é dever do magistrado velar pelas custas processuais:
+
+
+
+“Art. 35 - São deveres do magistrado:
+
+(...)
+
+VIl - exercer assídua fiscalização sobre os subordinados, especialmente no que se refere à cobrança de custas e emolumentos, embora não haja reclamação das partes;” [g.n.]
+
+
+
+O valor da causa deve corresponder ao conteúdo econômico buscado pelo autor em uma determinada ação, nos termos do artigo 291 do Código de Processo Civil.
+
+
+
+No caso em tela, não verifico irregularidade alguma quanto ao valor da causa, na medida em que o autor atribuiu à presente ação indenizatória valor da causa conforme o artigo 292 inciso V do Código de Processo Civil.
+
+
+
+Os demais pedidos não possuem seu proveito econômico possível de auferição a olho nu, tampouco a requerida trouxe aos autos qual seria o valor correto da causa.
+
+
+
+Dessa forma, não há como se acolher o pedido genérico de majoração do valor da causa, na medida em que este apenas seria acertado com documentos de posse exclusiva da requerida.
+
+
+
+Dessa forma, REJEITO a impugnação ao valor da causa.
+
+
+
+Quanto ao mérito da ação.
+
+
+
+Quanto ao mérito, os pedidos são IMPROCEDENTES. 
+
+
+
+Cuida-se de ação para reconhecimento do autor como criador ou cocriador do personagem Kayn do jogo <em>League</em> <em>of</em> <em>Legends</em>, com a condenação da requerida em reflexos indenizatórios, ante a alegada infração da lei de Direitos Autorais, nº 9.610/98.
+
+
+
+A requerida nega a participação do autor processo de criação.
+
+
+
+A vexata quaestio se traduz em verificar se o autor de fato é o criador do conceito do personagem ou contribuiu, de alguma forma, para o processo criativo deste.
+
+
+
+A resposta é negativa.
+
+
+
+Como se sabe, ônus da prova é a conduta que se espera da parte, para que a verdade dos fatos alegados seja admitida pelo juiz e possa ela extrair daí consequências jurídicas pertinentes ao caso. Já que há interesse da parte em demonstrar a veracidade dos fatos expostos, porque somente assim pode dela, uma vez que, ônus da prova significa o interesse da parte em produzir a prova que lhe traga consequências favoráveis.
+
+
+
+Se prova há, porque foi produzida, não importando por quem, as regras do ônus da prova são desnecessárias. Provados os fatos, o juiz tão-somente os adequará à norma jurídica correspondente. Mas se não há prova, necessário se torna que o sistema trace os princípios a serem trilhados pelo juiz para chegar à justa solução da demanda. Assim, dota-se o julgador de regras a nortear-lhe a atividade e sistematiza-se o procedimento probatório, evitando-se diligências indesejáveis.
+
+
+
+O Código de Processo Civil divide o ônus da prova pela posição processual que a parte assume. Se no pólo ativo, compete-lhe provar apenas o fato constitutivo de seu pretenso direito. Se no pólo passivo, somente deverá provar se alegar fato impeditivo, modificativo ou extintivo do direito alegado pela autora.
+
+
+
+Doutrinando acerca do assunto, acentua o emérito HUMBERTO THEODORO JÚNIOR que "não há um dever de provar, nem à parte assiste o direito de exigir a prova do adversário. Há um simples ônus, de modo que o litigante assume o risco de perder a causa se não provar os fatos alegados e do qual depende a existência do direito subjetivo que pretende resguardar através da tutela jurisdicional. Isto porque, segundo a máxima antiga, fato alegado e não provado é o mesmo que fato inexistente" (THEODORO JÚNIOR, Humberto. Curso de direito processual civil. 12. ed. Forense, 1994. p. 411).
+
+
+
+Atribuído o ônus de provar à parte, a alegação levada a efeito, em caso de não produção de prova a fim de corroborá-la, acarreta como consequência a conclusão negativa no convencimento judicial acerca de sua ocorrência no mundo fático (verdade formal). Ainda segundo os ensinamentos de Humberto Theodoro Junior acerca do ônus da prova:
+
+
+
+“(...) consiste na conduta processual exigida da parte para que a verdade dos fatos por ela arrolados seja admitida pelo juiz. Não há um dever de provar, nem à parte contrária assiste o direito de exigir a prova do adversário. Há um simples ônus, de modo que o litigante assume o risco de perder a causa se não provar os fatos alegados dos quais depende a existência do direito subjetivo que pretende resguardar através da tutela jurisdicional. Isto porque, segundo máxima antiga, fato alegado e não prova é o mesmo que fato inexistente” (Curso de Direito Processual Civil, v. I, 44ª ed., Rio de Janeiro: Forense, 2006, p. 281).
+
+
+
+Da mesma forma, observa o festejado MOACYR AMARAL SANTOS que "como a simples alegação não é suficiente para formar a convicção do juiz (allegatio et non probatio quasi non allegatio), surge a imprescindibilidade da prova da existência do fato. E dada a controvérsia entre o autor e os réus, com referência ao fato e às suas circunstâncias, impondo-se, pois, prová-lo e prová-las, decorre o problema de saber a quem incumbe dar a sua prova. A quem incumbe o ônus da prova? Esse é o tema que se resume na expressão - ônus da prova" (SANTOS, Moacyr Amaral. Primeiras linhas do direito processual civil. 17. ed. São Paulo: Saraiva, 1995. p. 343-344). Fornecendo a resposta, registra o mestre à pág. 345 que "incumbe o ônus da prova a quem diz, ou afirma, ou age. Ora, quem vem a juízo, em primeiro lugar, é o autor; quem inicia a lide é o autor; quem afirma o fato é o autor. Donde tudo parecia mostrar, como corolário imediato daquele preceito, que ao autor cumpria o ônus da prova: actori incumbit ônus probandi". Ao depois, adita que "o critério para distinguir a qual das partes incumbe o ônus da prova de uma afirmação - ensina CARNELUTTI - é o do interesse da própria afirmação. Cabe provar - escreve ele - a quem tem interesse de afirmar; portanto, quem apresenta uma pretensão cumpre provar-lhe os fatos constitutivos e quem fornece a exceção cumpre provar os fatos extintivos ou as condições impeditivas ou modificativas" (p. 347).
+
+
+
+Por igual, anotam os brilhantes NELSON NERY JÚNIOR e ROSA MARIA DE ANDRADE NERY que "art. 333, I: Regra geral. Segundo a regra instituída por Paulo, compilada por Justiniano, a prova incumbe a quem afirma e não a quem nega a existência de um fato (Dig. XXII, 3, 2). O autor precisa demonstrar em juízo a existência do ato ou fato por ele descrito na inicial como ensejador do seu direito" (NERY JÚNIOR, Nelson; NERY, Rosa Maria de Andrade. Código de Processo Civil comentado. RT, 1994. p. 516).
+
+
+
+A respeito, tem reiteradamente decidido nossos tribunais pátrios que "sustentando-se o direito em fatos, aquele que invoca arca com o ônus da prová-los. Faltando consistência objetiva ao pedido do autor, inarredável é a improcedência da prestação jurisdicional" (TJ/SC, ACV nº 44.087, de Campo Erê, rel. Des. Francisco Oliveira Filho), e, que "o autor precisa demonstrar em juízo a existência do ato ou fato por ele descrito na inicial como ensejador do seu direito, sob pena de, não o fazendo, ver inacolhida a sua pretensão" (TJ/SC, ACV nº 96. 000425-4, da Capital, rel. Des. Eder Graf).
+
+
+
+No caso em tela, ao contrário, o autor não se desincumbiu do ônus de provar o fato constitutivo de seu direito (art. 373, inc. I, do Código de Processo Civil), qual seja, a criação do conceito do personagem Kayn, prova essa que é produzida  de forma estritamente documental.
+
+
+
+Para o julgamento da presente demanda, deve-se considerar a lei de nº 9.610/1998 – Lei dos Direitos Autorais, em especial seu artigo 8º:
+
+
+
+Art. 8º Não são objeto de proteção como direitos autorais de que trata esta Lei:
+
+I - as idéias, procedimentos normativos, sistemas, métodos, projetos ou conceitos matemáticos como tais;
+
+II - os esquemas, planos ou regras para realizar atos mentais, jogos ou negócios;
+
+III - os formulários em branco para serem preenchidos por qualquer tipo de informação, científica ou não, e suas instruções;
+
+IV - os textos de tratados ou convenções, leis, decretos, regulamentos, decisões judiciais e demais atos oficiais;
+
+V - as informações de uso comum tais como calendários, agendas, cadastros ou legendas;
+
+VI - os nomes e títulos isolados;
+
+VII - o aproveitamento industrial ou comercial das idéias contidas nas obras (g.n.)
+
+
+
+O inciso I do artigo supracitado resume a pretensão autoral em poucas linhas: buscar a tutela jurisdicional para proteger uma simples ideia, não registrada e desprovida de detalhes técnicos.
+
+
+
+O autor alega que a singela sugestão de criação do personagem Jhef no forum (ou canal de atendimento) – fls. 26/27 da parte ré, ensejou na criação do personagem Kayn (fls.33/38).
+
+
+
+Trata-se de um grande salto de interpretação.
+
+
+
+Conforme provado pela requerida (fls. 263), o processo de criação de um personagem vai muito além da simples sugestão de nome e criação de habilidades.
+
+
+
+Trata-se de um trabalho exaustivo, produzido por uma equipe de profissionais de criação, que pode levar anos até o lançamento do produto no mercado de consumo, que obedece uma linha cronológica e prazos extensos.
+
+
+
+Ao que consta nos autos (fls. 26) o autor, apenas com a identificação de usuário Nudescrazy, pretende avocar para si a autoria da criação do personagem Kayn, alegando que a ré roubou o conceito de seu personagem Jhef.
+
+
+
+Ainda que se considere a precária manifestação de fls. 26 (que não possui identificação do usuário emissor da ideia), sequer há similitude comparável com o conceito criado pelo autor, com o que efetivamente fora lançado pela parte requerida.
+
+
+
+Conforme comprovado pela ré, a criação do personagem vai desde o esboço inicial (fls. 359/369), criação de voz, design, arte final, criação das habilidades, ajustes, dentre outras praxes produzidas pelo time de criação.
+
+
+
+É completamente temerário se afirmar que a simples sugestão enviada ao canal de atendimento da ré ensejou na criação do personagem.
+
+
+
+O autor, ao seu alvitre, não possui registro de marca, não apresentou ao juízo esboço da arte do personagem, criação de voz, aprofundamento do conceito, marketing, apenas a sugestão anônima de nome e criação de habilidades e conceito, que inclusive são genéricos e compartilhados com outros campeões do jogo produzido pela ré (fls. 264/347) e personagens da cultura pop (fls. 348/350, 351/358).
+
+
+
+A simples ideia do autor quanto a criação do personagem Jhef não da azo ao avocar para si a criação do personagem Kayn, trabalho realizado exclusivamente pela equipe de produção da parte requerida, durante anos.
+
+
+
+De mais a mais, a parte autora, ao contrariar os termos de uso da requerida (em especial o tópico IV, ponto C – fls. 56), enviou uma ideia à ré que não foi solicitada, nem por meio pessoal, nem por concurso aberto aos  jogadores.
+
+
+
+Esta expresso nos termos de uso que a parte ré não deseja o envio de ideias quanto a criação de novos personagens, justamente para evitar o ajuizamento de ações iguais à presente líde.
+
+
+
+Não há como o autor negar ciência quanto aos termos de uso, na medida em que este deve aceitar os termos de uso para acessar o jogo eletrônico disponibilizado pela ré, bem como a propria requerida negou a solicitação do autor para a criação do personagem.
+
+
+
+Dessa forma, e em suma, não vislumbro qualquer indício de autoria do autor quanto a criação do personagem, na medida em que este formulou um pedido anônimo e genérico no canal de atendimento da requerida, que muito se assemelham a habilidades existentes de outros campeões.
+
+
+
+Tampouco lhe assiste razão em seus pedidos indenizatórios tanto de danos materiais quanto de danos morais, na medida em que este não participou do processo criativo do personagem em questão e não há qualquer indício de plágio ou conduta ilícita por parte da ré.
+
+
+
+Das providências complementares
+
+
+
+Por derradeiro, tendo em vista o longo histórico do menor P.L.T.S. junto a jogos eletrônicos de graduada violência desde a mais tenra infância, que, aliado ao episódio narrado nestes autos, infere-se uma ideia de dependência psicológica desde junto a games de tal natureza, expondo-o a níveis preocupantes e desconhecidos de conteúdos inadequados à sua idade.
+
+
+
+Dito isto, DETERMINO SEJA OFICIADA À PROMOTORIA DE INFÂNCIA E JUVENTUDE DA CAPITAL, com cópia integral destes autos, para o fim de que se apure eventual conduta negligente por parte de seus genitores, e providências cabíveis.
+
+
+
+Não se olvide os notórios e recentes precedentes de violência envolvendo adolescentes e jovens adultos influenciados por jogos eletrônicos (vide massacre de Suzano):
+
+
+
+Art. 5º Nenhuma criança ou adolescente será objeto de qualquer forma de negligência, discriminação, exploração, violência, crueldade e opressão, punido na forma da lei qualquer atentado, por ação ou omissão, aos seus direitos fundamentais.
+
+
+
+DISPOSITIVO
+
+
+
+Diante do exposto, JULGO IMPROCEDENTE a ação proposta por P.L.T.S, representado por seu genitor Mário Luiz da Silva em face de RIOT GAMES SERVIÇOS LTDA. com fulcro no artigo 487, inciso I, do Código de Processo Civil. 
+
+
+
+Em decorrência da sucumbência, arcará o autor, com o pagamento das custas, despesas processuais e honorários advocatícios que fixo em 20% (vinte por cento) do valor atualizado da causa (CPC, art. 85, § 2º).
+
+
+
+Preteridas as demais alegações, por incompatíveis com a linha adotada, ficam as partes advertidas de que a oposição de embargos fora das hipóteses legais e/ou com postulação meramente infringente ensejará a imposição da multa prevista no art. 1026, § 2º, CPC. 
+
+
+
+Tendo em vista a expressa revogação do artigo 1.096 das Normas de Serviço da Corregedoria Geral da Justiça (Provimento CF nº 17/2016), bem como a nova orientação trazida pelo Código de Processo Civil (artigo 1.010, § 3º) as Unidades Judiciais de 1º Grau estão dispensadas de efetuar o cálculo do preparo. 
+
+
+
+Eventual recurso de apelação, intime-se a parte contrária para querendo, apresentar contrarrazões, no prazo de 15 (quinze) dias (CPC, art. 1.010, § 1º).
+
+
+
+Após, considerando que o juízo de admissibilidade será realizado pelo juízo ad quem, subam os presentes autos ao E. Tribunal de Justiça de São Paulo, com as nossas homenagens e cautelas de estilo.
+
+
+
+Certificado o trânsito em julgado, manifeste-se o vencedor em termos de prosseguimento no prazo de 30 dias, devendo o exequente peticionar como "Cumprimento de Sentença", que deverá seguir os moldes do CG 1789/2017, processado em apartado.
+
+
+
+Ciência ao Ministério Público.
+
+
+
+P.R.I.C.
+
+
+
+São Paulo, 13 de setembro de 2019.
+
+
+
+
+
+DOCUMENTO ASSINADO DIGITALMENTE NOS TERMOS DA LEI 11.419/2006, CONFORME IMPRESSÃO À MARGEM DIREITA
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+			<tr class="fundocinza1">
+				<td width="40" align="left" valign="top" class="fonte">
+					<strong>10&nbsp;-</strong>
+				</td>
+				<td valign="top">
+					<table cellspacing="0" cellpadding="0" width="100%"  >				
+						
+						<tr class="fonte">
+							<td colspan="2" align="left">
+								<a style="vertical-align: top" title="Visualizar Inteiro Teor"
+									name="2S000PJ8S0000-100-PG5JM-62492215" >
+									<span class="fonteNegrito"> 1043663-80.2017.8.26.0100 </span>
+								</a>
+								<a name="2S000PJ8S0000-100-PG5JM-62492215" >
+									<img src="/cjpg/imagens/saj/ico_pdf.gif" border="0" title="Visualizar Inteiro Teor" /> 
+								</a>
+							</td>
+						</tr>		
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Classe:
+									</strong> Procedimento Comum Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Assunto:
+									</strong> Rescisão / Resolução
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Magistrado:
+									</strong> Rodrigo Cesar Fernandes Marinho
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Comarca:
+									</strong> SÃO PAULO
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Foro:
+									</strong> Foro Central Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Vara:
+									</strong> 4ª Vara Cível
+								</td>
+							</tr>
+						
+						
+						
+							<tr class="fonte">
+								<td align="left">
+									<strong>
+										Data de Disponibilização:
+									</strong> 29/06/2018
+								</td>
+							</tr>
+						
+						
+						
+													
+														
+									<tr class="fonte">
+										<td colspan="2" align="left">
+											<div align="justify">
+												<span>
+													... realização do "Circuito Desafiante 2017" do "<em>League</em> <em>of</em> <em>Legends</em>", tal torneio acabou sendo promovido pela empresa PROMO ARENA, cujo domínio www.promoarena.com.br, por sua vez, fora criado pelo sócio da requerida, Sr. João Luiz de Aguiar Pott, em 3 de agosto de 2016.
+
+Por outro lado, as alegações apresentadas na contestação não comportam acolhimento. 
+
+Nos termos do ...
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMais.png" height="12" width="12" border="0" title="Visualizar Inteiro Teor Completo"/>
+											</div>		
+											<div align="justify" style="display: none;">
+												<span>
+													
+PODER JUDICIÁRIO
+
+São Paulo
+
+4a Vara Cível Central 
+
+              Fórum João Mendes Júnior - Praça Dr. João Mendes, s/n°, 6º andar, salas. 612/618
+
+            São Paulo / SP - CEP 01501-900 - Fone: (11) 2171-6000 (PABX)
+
+
+
+Ação: Procedimento Comum
+
+Processo nº 1043663-80.2017.8.26.0100 Rescisão / Resolução
+
+Requerente: Boa Compra Tecnologia Ltda
+
+Requerido: JPOTT Prestação de Serviços de Apoio Administrativo Ltda - ME											
+
+1043663-80.2017.8.26.0100 - lauda 
+
+
+
+C O N C L U S Ã O
+
+Em 29 de junho de 2018, faço estes autos conclusos ao Meritíssimo Juiz de Direito, Rodrigo Cesar Fernandes Marinho. Eu,___________, Escrevente, digitei.
+
+
+
+Vistos.
+
+
+
+BOA COMPRA TECNOLOGIA LTDA. moveu ação de rescisão contratual contra JPOTT PRESTAÇÃO DE SERVIÇOS DE APOIO ADMINISTRATIVO LTDA. - ME, alegando, em síntese, ter contratado a ré para a prestação de serviços necessários à operacionalização de torneios de eSports, conforme cláusula 1.1 do contrato, com cláusula de não concorrência. Ocorre que a ré descumpriu o contrato e passou a prestar serviços diretamente à Riot Games, o que impediu a renovação da parceria anteriormente estabelecida entre a autora e a referida empresa. Sustenta ter direito à rescisão do contrato e ao recebimento da multa prevista na cláusula 9.1.
+
+Por tais razões, requer a rescisão do contrato e a condenação da ré ao pagamento de R$ 1.415.259,00. A inicial veio instruída com documentos (fls. 20/127).
+
+Pela decisão de fls. 1447/1448 foi reconhecida a nulidade da citação e dos atos subsequentes. 
+
+Suprida a citação, o réu apresentou contestação (fls. 334/354), arguindo, preliminarmente, a existência de prejudicialidade externa. Em relação ao mérito, alega, em resumo, que é sociedade “montada” pela autora para “camuflar o vínculo trabalhista” entre esta e João Luiz Aguiar Pott, único sócio da ré. Sustenta a nulidade do contrato e a ausência de obrigatoriedade da cláusula de não competição em relação ao sócio. Alega que a marca PROMOARENA foi registrada a pedido de terceiro, a quem sempre pertenceu. Sustenta que a cláusula 9.1 é abusiva e, por isso, deve ser considerada nula, ou, ainda, a multa deve ser reduzida. Requer extinção do processo sem resolução do mérito, a improcedência ou, subsidiariamente, a redução da multa. Exibiu os documentos de fls. 360/1417. 
+
+Réplica a fls. 1456/1483, com a qual foram exibidos os documentos de fls. 1484/1614.  
+
+É o Relatório.
+
+Fundamento e Decido.
+
+
+
+Julgo antecipadamente a lide, na forma do artigo 355, inciso I, do Código de Processo Civil, pois a matéria em discussão é eminentemente de direito, prescindindo de produção de outras provas em audiência.
+
+Afasto, inicialmente, a alegação de prejudicialidade externa.
+
+Com efeito, conforme se depreende dos documentos exibidos, a sentença de improcedência proferida na reclamação trabalhista já foi confirmada pelo Tribunal Regional do Trabalho, que manteve a negativa de reconhecimento de vínculo empregatício entre o sócio da ré e a autora.
+
+Assim, não se justifica a suspensão do feito postulada pela requerida.
+
+No mérito, o pedido é procedente.
+
+As partes firmaram contrato que tinha por finalidade a prestação, pela ré, de serviços "necessários à operacionalização de torneios de eSports, na modalidade online e/ou offiline/presencial ('Serviços), de acordo com o quanto especificamente descrito no Anexo I" (cláusula 1.1).
+
+Além da obrigação de executar os serviços indicados, a ré assumiu expressamente o dever de não competição, na forma do artigo 12.1 da avença: "Durante a vigência deste Contrato, a CONTRATADA, em nenhuma circunstância, fechará acordos, propostas ou contratos similares ao presente com as empresas aqui identificadas: Google, Terra, IBest, Globo.com, Yahoo!, Twitch, Hitbox, X5, XMA/BrasilMegaArena, ESL, Intel Extreme Master, Bixty, EPREPAG, EBANX, PrimeiroPay, PaymentWall, PayU, GoCash, MercadoLivre/MercadoPago, PayPal; e/ou com demais empresas que, por si ou por suas afiliadas, realizem quaisquer atividades diretamente concorrentes aos serviços disponibilizados pelo BOACOMPRA, entre outros, correspondentes aos ramos de eSports ou meios de pagamentos e de entretenimento". Acrescenta a cláusula 12.2 que "a CONTRATADA se compromete a não competir diretamente com o BOACOMPRA e abaster-se de entrar em contato com clientes (desenvolvedores de jogos eletrônicos) e/ou parceiros comerciais do BOACOMPRA para oferecer os Serviços objeto deste Contrato, durante toda a vigência deste Contrato e por um período adicional de 03 (três meses) após o seu término, por qualquer motivo, salvo expressamente autorizado pelo BOACOMPRA". 
+
+     
+
+
+
+A cláusula de não concorrência foi valida e livremente estabelecida entre as partes e constitui mecanismo destinado a resguardar as técnicas e conhecimentos específicos empregados no meio empresarial, protegendo os contratantes de concorrência desleal que possam vir a sofrer em casos de resolução do contrato ou retirada de sócio.
+
+Ademais, na hipótese em análise a cláusula foi estabelecida com prazo mais que razoável de três meses após o término do contrato.
+
+ Ora, conforme se depreende dos documentos apresentados pela autora, a ré, por meio de seu colaborador Luiz Henrique de Andrade, manteve tratativas com a Riot Games e, após a ausência de renovação da parceira mantida entre a autora e a referida empresa para a realização do "Circuito Desafiante 2017" do "<em>League</em> <em>of</em> <em>Legends</em>", tal torneio acabou sendo promovido pela empresa PROMO ARENA, cujo domínio www.promoarena.com.br, por sua vez, fora criado pelo sócio da requerida, Sr. João Luiz de Aguiar Pott, em 3 de agosto de 2016.
+
+Por outro lado, as alegações apresentadas na contestação não comportam acolhimento. 
+
+Nos termos do artigo 150 do Código Civil, “se ambas as partes procederem com dolo, nenhuma pode alegá-lo para anular o negócio, ou reclamar indenização”.
+
+Ensina Gustavo Tepedino que “em se configurando dolo de ambas as partes, revelam-se manobras maliciosas bilaterais, levando-se a uma espécie de neutralização dos dois ilícitos. A nenhum deles caberá se aproveitar da própria torpeza. Por conseguinte, em caso de dolo recíproco, não haverá anulação do negócio” (Código Civil Interpretado conforme a Constituição da República, 2ª ed, vol I, Renovar, 2007, p. 287).
+
+Logo, não cabe à ré alegar que a ré constituiria mera empresa fictícia e que o contrato estabelecido entre as partes seria nulo. De mais a mais, tais alegações já foram amplamente repelidas na Justiça do Trabalho, tendo o E. Tribunal Regional do Trabalho da 1ª Região, que manteve a sentença de improcedência, concluindo pela ausência de vínculo empregatício entre a autora e João Luiz de Aguiar Pott (fls. 1710/1720). 
+
+É inverossímil, outrossim, a afirmação de que o Sr. João Luiz tenha realizado o registro do domínio www.promoarena.com.br a pedido de um amigo, eis que o registro exibido a fls. 86 indica o sócio da ré como contato administrativo, técnico e de cobrança do domínio, sendo tal indício corroborado pelo contrato posteriormente firmado pela empresa PROMO ARENA para prestar serviços que antes eram executados pela autora.
+
+Nesse sentido, o mero auxílio da ré, por meio de seu sócio, para que a nova empresa constituída PROMO ARENA assumisse a prestação de serviços antes executada pela autora, já seria suficiente para configurar violação ao princípio da não concorrência e, por corolário, autorizar a aplicação da multa livremente estabelecida na cláusula 9.1 do contrato.
+
+Por fim, considerando a natureza jurídica de cláusula penal, seria possível a aplicação do artigo 413 do Código Civil: "A penalidade deve ser reduzida equitativamente pelo juiz se a obrigação principal tiver sido cumprida em parte, ou se o montante da penalidade for manifestamente excessivo, tendo-se em vista a natureza e a finalidade do negócio".
+
+Contudo, não se pode olvidar que a ré é representada por empresário experiente e, dessa forma, não havia qualquer situação de hipossuficiência técnica no momento da celebração do contrato.  
+
+O valor estabelecido, por sua vez, é compatível com a magnitude da parceria e a necessidade de impedir a prática de concorrência desleal, de modo que cabe à ré responder pelo descumprimento e, portanto, sujeitar-se ao pagamento integral da multa.
+
+Ante o exposto, JULGO PROCEDENTE o pedido da presente ação ajuizada por BOA COMPRA TECNOLOGIA LTDA. contra JPOTT PRESTAÇÃO DE SERVIÇOS DE APOIO ADMINISTRATIVO LTDA. - ME para declarar a rescisão do contrato por culpa da ré e condená-la ao pagamento de R$ 1.415.259,00, com correção monetária a contar do ajuizamento e juros de mora de 1% ao mês a partir da citação.
+
+Pelo princípio da causalidade, arcará a ré com o pagamento das custas e despesas processuais, bem como honorários do patrono da autora, arbitrados em 10% do valor da condenação.
+
+
+
+
+
+Publique-se, registre-se e intime-se.
+
+São Paulo, 29 de junho de 2018.
+
+
+
+
+
+Rodrigo Cesar Fernandes Marinho
+
+Juiz de Direito
+
+DOCUMENTO ASSINADO DIGITALMENTE NOS TERMOS DA LEI 11.419/2006, CONFORME IMPRESSÃO À MARGEM DIREITA
+
+
+
+
+
+
+												</span><img class="mostrarOcultarConteudo" src="/cjpg/imagens/saj/icoMenos.png" height="12" width="12" border="0" />
+											</div>					
+										</td>
+									</tr>						
+								
+															
+								
+							
+						
+						
+					</table>
+					<br /> <br />
+				</td>
+			</tr>
+		
+	</table>
+	
+
+</div>
+
+
+		</td>
+		<td width="20px">
+			&nbsp;
+		</td>
+		<td valign="top" width="230px">
+			
+
+
+
+
+
+<table id="abaAdicionar" width="100%" border="0" cellpadding="0" cellspacing="1" align="center" bgcolor="#CCCCCC" >
+	<tr>
+		<td width="*" height="20" bgcolor="#CCCCCC">
+			<span id="spanTermosRelacionados" >
+				<strong>
+					Termos mais freqüentes
+				</strong>
+			</span>
+		</td>
+		<td width="50px" align="center">
+			<img id="imgAdicionar" src="imagens/saj/fecharFiltro.gif" border="0"
+				align="middle">
+		</td>
+	</tr>
+</table>
+
+<div id="adicionarPesquisa">
+	<table width="100%" border="0" cellpadding="0" cellspacing="1" align="center" bgcolor="#CCCCCC">
+		<tr>
+			<td bgcolor="#EEEEEE">
+								
+					<table width="100%" cellpadding="0" cellspacing="0" class="termosRelacionados">
+						
+						
+							<tr>
+								<td align="center" height="20px">
+									Nenhum termo relacionado
+								</td>
+							</tr>
+						
+					</table>
+	
+			</td>
+		</tr>
+		<tr>
+			<td height="20" bgcolor="#DDDDDD">
+				<table width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center" style="padding-left: 10px;">
+							<input type="button" class="botaoTermosRelacionados"
+								value="Adicionar à pesquisa" >
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+			
+			
+		</td>
+	</tr>
+</table>	
+
+
+
+
+
+
+
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+	<tr height="20">
+		<td bgcolor="#EEEEEE">
+			Resultados
+
+			<strong>
+				1 a 10
+			</strong>
+			de 15
+		</td>
+			
+		<td bgcolor="#EEEEEE" align="right">
+
+		<div class="trocaDePagina">
+		
+
+		
+		
+
+		
+		
+			
+		
+		
+			
+				
+					<span style="font-weight:bold;" >
+						1
+					</span>
+				
+				
+			
+		
+			
+				
+				
+					<a href="#" name="2" style="padding-left:4px" >
+						2
+					</a>
+				
+			
+		
+
+		
+			<a name="2" title="Próxima página">
+				&gt;
+			</a>
+		
+
+		</div>
+
+		</td>
+	</tr>
+
+	<tr>
+		<td height="1" bgcolor="#999999" colspan="2"></td>
+	</tr>
+</table>
+&nbsp;
+
+						</div>
+					
+					
+				
+				
+			
+			
+			
+			
+</form>
+
+		
+		
+
+	
+	
+
+
+
+
+
+
+
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+
+
+
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="esajTabelaRodape" summary=" ">
+    <tr>
+        <td class="esajCelulaRodapeCentro">
+            Desenvolvido pela Softplan em parceria com a Secretaria de Tecnologia da Informação - STI
+            
+        </td>
+    </tr>
+</table>
+<link href="https://esaj.tjsp.jus.br/esaj/tema/padrao/css/saj-popup-modal.css" rel="stylesheet" type="text/css">
+<link href="https://esaj.tjsp.jus.br/esaj/tema/padrao/css/popup-beta.css" rel="stylesheet" type="text/css">
+
+
+<script>
+    var appEsajLayout = appEsajLayout || {};
+    appEsajLayout.tituloCertificadoDigital = 'Certificado digital';
+    appEsajLayout.cliente = 'SP';
+    appEsajLayout.emailParaContato = 'esajtjsp@softplan.com.br';
+    appEsajLayout.utilizarBotaoContato = 'true';
+    appEsajLayout.contexto = 'https://esaj.tjsp.jus.br/esaj';
+
+    if(window.jQuery) {
+        jQuery.saj = jQuery.saj || {};
+        jQuery.saj.certificado = jQuery.saj.certificado || {};
+        jQuery.saj.certificado.cliente = 'SP';
+        jQuery.saj.certificado.urlConteudoAjudaWebSigner = appEsajLayout.contexto + '/ajudaWebSigner.do';
+        jQuery.saj.certificado.licenca = 'ARkEKi50anNwLmp1cy5iciwxMC4zMy4xOTIuMTAxLDEwLjMzLjE5Mi4xMDUsMTAuMzMuMTkyLjE0NiwxMC4zMy4xOTIuMjQxLDEwLjMzLjE5Mi45MCwxMC4zMy4xOTIuOTEsMTAuMzMuMTkyLjkyLDEwLjMzLjE5Mi45NCwxMC4zMy4xOTMuMTg1LDEwLjMzLjE5My4xODYsMTAuMzMuMTkzLjE4NywxMC4zMy4xOTMuMTg4LDEwLjMzLjE5NC4yMjQsMTAuMzMuMTk0LjIyNSwxMC4zMy4xOTQuMjU1LDEwLjMzLjE5NC43NCwxMC4zMy4xOTQuNzUsMTAuMzMuMTk0Ljc2LDEwLjMzLjE5NC43NywxMC4zMy4xOTQuNzksMTAuMzMuMTk1LjEwMiwxMC4zMy4xOTUuMTAyLDEwLjMzLjE5NS4xMTksMTAuMzMuMTk1LjEyMSwxMC4zMy4xOTUuMTIyLDEwLjMzLjE5NS4xMjMsMTAuMzMuMTk1LjEyNCwxMC4zMy4xOTUuMTI1LDEwLjMzLjE5NS4xMjYsMTAuMzMuMTk1LjEyNywxMC4zMy4xOTUuMTI4LDEwLjMzLjE5NS4xMjksMTAuMzMuMTk1LjEzMCwxMC4zMy4xOTUuMTMxLDEwLjMzLjE5NS4xMzIsMTAuMzMuMTk1LjE4MywxMC4zMy4xOTUuMTg0LDEwLjMzLjE5NS4xODUsMTAuMzMuMTk1LjE4NiwxMC4zMy4xOTUuMTg3LDEwLjMzLjE5NS4xODgsMTAuMzMuMTk1LjE4OSwxMC4zMy4xOTUuMTkxLDEwLjMzLjE5NS4xOTIsMTAuMzMuMTk1LjE5MywxMC4zMy4xOTUuMTk0LDEwLjMzLjE5NS4xOTUsMTAuMzMuMTk1LjE5NSwxMC4zMy4xOTUuMTk3LDEwLjMzLjE5NS4xOTgsMTAuMzMuMTk1LjIzNCwxMC4zMy4xOTUuMjM3LDEwLjk4LjE5Mi4xMTMsMTAuOTguMTkyLjExNCwxMC45OC4xOTIuMTE3LDEwLjk4LjE5Mi4yNTAsMTAuOTguMTkyLjQyLDEwLjk4LjE5Mi43MCwxMC45OC4xOTIuNzEsMTAuOTguMTkzLjEyMSwxMC45OC4xOTMuMTIyLDEwLjk4LjE5My4xOTksMTAuOTguMTkzLjIwMCwxMC45OC4xOTMuMjAxLDEwLjk4LjE5My4yMDIsMTAuOTguMTkzLjIyNSwxMC45OC4xOTQuMTIxLDEwLjk4LjE5NC4xMjIsMTAuOTguMTk0LjE0MSwxMC45OC4xOTQuMTQyLDEwLjk4LjE5NC4xNDMsMTAuOTguMTk0LjE0NCwxMC45OC4xOTQuMTQ1LDEwLjk4LjE5NC4xNDcsMTAuOTguMzIuNzYAAAABt8T6Ov8g0lWHnOe7bekYQC1kjn/SgVPWGteqlpMDF8qEOKOxdWahBlk0uh9nfmPiUY9MXcXchlgu6V/zygYGgSfZG11odlUkrXZCAYX/pB3ArsqmrqgvMK0mxuTVOThs/flGWltXnCFEFEU1Pp6RSdlhtCOEuGx5XWov3lux8DcnB+DxL2zauU4GfGJmoXCZDMWT2g7MXIu7VjrJJEkCH/nZ0hkhUsw/k0ORu7/kXJyBufrFZYbsQ/Nadjp9CgYhlsjKXmSPSn8GU8xUetHXGX3FzFJriyk8iqcH72p4z0/Msif4S+VNz0JV3+xffRvdmKuG28jHHDUqBxIrhjs+XA==';
+        jQuery.saj.certificado.cofreDigital = jQuery.saj.certificado.cofreDigital || {};
+        jQuery.saj.certificado.cofreDigital.habilitado = 'false' === 'true';
+        jQuery.saj.certificado.cofreDigital.enderecoBase = 'https://esaj.tjsp.jus.br/esaj';
+    }
+
+</script>
+<script src="https://esaj.tjsp.jus.br/esaj/js/app-bundle.js?n=2978165087"></script>
+<script src="https://esaj.tjsp.jus.br/sajcas/seletorVersaoBeta.js?n=f6c460c0-0a09-4090-b369-4ac89f1d53b3&versao=1"></script>
+<script language="javascript" type="text/JavaScript" src="https://esaj.tjsp.jus.br/esaj/js/softplan-websigner-2.5.1.js?n=736057767"></script>
+
+<script language="javascript" type="text/JavaScript" src="https://esaj.tjsp.jus.br/esaj/js/saj-certificado.js?n=1326929064"></script>
+
+
+
+<div id="webSignerNaoInstalado" style="display: none;">
+    <p>Para utilização do certificado digital no Portal e-SAJ é necessário a instalação do plug-in Web Signer. Por favor, realize a instalação antes de continuar.</p>
+    <div class="footer_certificado">
+        <button id="redirecionarParaPaginaInstalacao" class="actionPrincipal spwBotaoDefault">Instalar</button>
+        <button class="fecharModalInstalacao spwBotao">Cancelar</button>
+        <button class="spwBotao" onclick="window.open('https://esaj.tjsp.jus.br/WebHelp//#id_instalacao_lacuna.htm','_blank')">Ajuda</button>
+    </div>
+</div>
+
+<div id="webSignerNaoSuportado" style="display: none;">
+    <p>O navegador utilizado não é compatível com a tecnologia (Web Signer) necessária para utilização do certificado digital. Por favor, utilize um dos navegadores homologados. Em caso de dúvidas, efetue a validação de requisitos <a href="https://esaj.tjsp.jus.br/petpg-verificacao/abrirVerificacaoRequisitosPet.do" target="_blank">aqui</a>.</p>
+    <div class="footer_certificado">
+        <button class="fecharModalInstalacao spwBotaoDefault actionPrincipal">OK</button>
+    </div>
+</div>
+
+
+	
+
+
+  
+	
+	
+
+
+
+	
+</html>
