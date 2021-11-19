@@ -40,6 +40,12 @@ httr::GET(link_inicial, httr::write_disk(nome_do_arquivo, overwrite = TRUE))
 
 baixa_pagina_da_wiki <- function(link, dir){
   
+  if(stringr::str_detect(link, "#")){
+    stop("Link com # é proibido")
+  }
+  
+  message(paste0("Estou baixando o link ", link))
+  
   nome_do_arquivo <- link %>% 
     fs::path_file() %>% 
     stringr::str_replace_all("[:punct:]", "_") %>% 
@@ -54,4 +60,54 @@ baixa_pagina_da_wiki <- function(link, dir){
 
 # 3. iterar (repetir downloads parecidos várias vezes)
 
-purrr::map(links[1:3], baixa_pagina_da_wiki, dir = "D:/202111-web-scraping/pasta_da_wiki")
+baixa_pagina_da_wiki(links[1], dir = "D:/202111-web-scraping/pasta_da_wiki")
+
+possibly()
+
+p_baixa_pagina_da_wiki <- possibly(baixa_pagina_da_wiki, 
+                                        "esse aqui deu errado!")
+
+s_baixa_pagina_da_wiki <- safely(baixa_pagina_da_wiki)
+
+s_baixa_pagina_da_wiki <- quietly(baixa_pagina_da_wiki)
+
+s_q_baixa_pagina_da_wiki <- baixa_pagina_da_wiki %>% 
+  quietly() %>% 
+  safely()
+
+purrr::map(links[3:6], s_q_baixa_pagina_da_wiki, dir = "D:/202111-web-scraping/pasta_da_wiki")
+
+library(progressr)
+
+baixa_pagina_da_wiki_com_prog <- function(link, dir, p){
+  
+  if(stringr::str_detect(link, "#")){
+    stop("Link com # é proibido")
+  }
+  
+  message(paste0("Estou baixando o link ", link))
+  
+  nome_do_arquivo <- link %>% 
+    fs::path_file() %>% 
+    stringr::str_replace_all("[:punct:]", "_") %>% 
+    stringr::str_to_lower() %>% 
+    fs::path(dir, . , ext = "html")
+  
+  httr::GET(link, httr::write_disk(nome_do_arquivo, overwrite = TRUE))
+  
+  p()
+  
+  return(nome_do_arquivo)
+  
+}
+
+q_s_baixa_pagina_da_wiki_com_prog <- quietly(safely(baixa_pagina_da_wiki_com_prog))
+
+meus_resultados <- with_progress({
+  prog <- progressor(along = links_para_baixar)
+  
+  purrr::map(links_para_baixar, q_baixa_pagina_da_wiki_com_prog,
+             dir = "D:/202111-web-scraping/pasta_da_wiki",
+             p = prog)
+  
+})
