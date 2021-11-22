@@ -103,11 +103,54 @@ baixa_pagina_da_wiki_com_prog <- function(link, dir, p){
 
 q_s_baixa_pagina_da_wiki_com_prog <- quietly(safely(baixa_pagina_da_wiki_com_prog))
 
+tictoc::tic()
 meus_resultados <- with_progress({
   prog <- progressor(along = links_para_baixar)
   
-  purrr::map(links_para_baixar, q_baixa_pagina_da_wiki_com_prog,
-             dir = "D:/202111-web-scraping/pasta_da_wiki",
+  purrr::map(links_para_baixar, q_s_baixa_pagina_da_wiki_com_prog,
+             dir = "output/pasta_da_wiki",
              p = prog)
   
 })
+tictoc::toc()
+
+
+# versão paralela ---------------------------------------------------------
+
+library(future)
+
+plan(multisession, workers = 8)
+
+
+
+tictoc::tic()
+meus_resultados <- with_progress({
+  prog <- progressor(along = links_para_baixar)
+  
+  furrr::future_map(links_para_baixar, q_s_baixa_pagina_da_wiki_com_prog,
+                    dir = "output/pasta_da_wiki",
+                    p = prog)
+  
+})
+tictoc::toc()
+
+
+# sem o with progress!
+progressr::handlers(global = TRUE)
+
+faz_map <- function() {
+  prog <- progressor(along = links_para_baixar)
+  furrr::future_map(
+    links_para_baixar, q_s_baixa_pagina_da_wiki_com_prog,
+    dir = "output/pasta_da_wiki",
+    p = prog
+  )
+}
+
+faz_map()
+
+
+
+
+
+
