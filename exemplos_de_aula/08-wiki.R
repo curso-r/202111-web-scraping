@@ -135,7 +135,7 @@ meus_resultados <- with_progress({
 tictoc::toc()
 
 
-# sem o with progress!
+# sem o with_progress()!
 progressr::handlers(global = TRUE)
 
 faz_map <- function() {
