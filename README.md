@@ -41,15 +41,22 @@ Fora do horário de aula ou monitoria:
 
 ## Scripts utilizados em aula
 
-| script                                                                                              |
-|:----------------------------------------------------------------------------------------------------|
-| [01-pokemon.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/01-pokemon.R)         |
-| [02-sabesp.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/02-sabesp.R)           |
-| [03-sptrans-alt.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/03-sptrans-alt.R) |
-| [03-sptrans.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/03-sptrans.R)         |
-| [04-twitter.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/04-twitter.R)         |
-| [05-covid.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/05-covid.R)             |
-| [07-tjsp.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/07-tjsp.R)               |
+| script                                                                                                  |
+|:--------------------------------------------------------------------------------------------------------|
+| [01-pokemon.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/01-pokemon.R)             |
+| [02-sabesp.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/02-sabesp.R)               |
+| [03-sptrans-alt.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/03-sptrans-alt.R)     |
+| [03-sptrans.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/03-sptrans.R)             |
+| [04-twitter.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/04-twitter.R)             |
+| [05-covid.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/05-covid.R)                 |
+| [06-html.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/06-html.R)                   |
+| [07-chancedegol.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/07-chancedegol.R)     |
+| [08-tjsp.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/08-tjsp.R)                   |
+| [08-wiki.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/08-wiki.R)                   |
+| [09-glueup.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/09-glueup.R)               |
+| [13-pesqele.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/13-pesqele.R)             |
+| [14-pbi.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/14-pbi.R)                     |
+| [xx-exemplo-denis.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/xx-exemplo-denis.R) |
 
 ## Lição de casa
 
