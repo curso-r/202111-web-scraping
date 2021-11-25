@@ -4,7 +4,7 @@ params:
   main_repo: "main-web-scraping"
   turma: "202111-web-scraping"
   nome_curso: "Web Scraping"
-  num_aula: 2
+  num_aula: 6
   download_material: TRUE # Deixe TRUE se quiser que tenha um link
   # para baixar o zip do material
 ---

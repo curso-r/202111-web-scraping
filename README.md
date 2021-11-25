@@ -52,8 +52,8 @@ Fora do horário de aula ou monitoria:
 | [06-html.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/06-html.R)                   |
 | [07-chancedegol.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/07-chancedegol.R)     |
 | [08-tjsp.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/08-tjsp.R)                   |
-| [08-wiki.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/08-wiki.R)                   |
 | [09-glueup.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/09-glueup.R)               |
+| [10-wiki.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/10-wiki.R)                   |
 | [13-pesqele.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/13-pesqele.R)             |
 | [14-pbi.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/14-pbi.R)                     |
 | [xx-exemplo-denis.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/xx-exemplo-denis.R) |
@@ -96,6 +96,15 @@ conteúdo da aula).
 |    2 | organizacao | [Exemplo de documentação de dados](https://r-pkgs.org/data.html#documenting-data)                                                    |
 |    2 | exemplo     | [Exemplo de pacote com automação](https://github.com/abjur/falrec)                                                                   |
 |    2 | leitura     | [Como instalar o rJava](https://cimentadaj.github.io/blog/2018-05-25-installing-rjava-on-windows-10/installing-rjava-on-windows-10/) |
+|    3 | leitura     | [Aula sobre Regex](https://curso-r.github.io/main-r4ds-2/slides/04-stringr.html#1)                                                   |
+|    4 | leitura     | [Agendando scripts com cronR](https://blog.curso-r.com/posts/2017-11-13-tutorial-cronr/)                                             |
+|    4 | exemplo     | [Trabalho do Marcello Filgueiras](https://github.com/jfemdados/covid19_pjf/blob/main/casos_diarios/casos_covidjf.R)                  |
+|    4 | leitura     | [Um pouco mais sobre o progressr](https://cran.r-project.org/web/packages/progressr/vignettes/progressr-intro.html)                  |
+|    5 | leitura     | [Material sobre xpath](https://www.w3schools.com/xml/xpath_syntax.asp)                                                               |
+|    5 | leitura     | [Documentação do RSelenium](https://docs.ropensci.org/RSelenium/)                                                                    |
+|    5 | leitura     | [Comparação BI e Shiny](https://blog.rstudio.com/2021/03/18/bi-and-data-science-the-tradeoffs/)                                      |
+|    6 | video       | [Github Actions](https://www.youtube.com/watch?v=fasKKHxye5w)                                                                        |
+|    6 | leitura     | [Github Actions](https://docs.github.com/pt/actions/reference/workflow-syntax-for-github-actions)                                    |
 
 ## Redes sociais da Curso-R
 
