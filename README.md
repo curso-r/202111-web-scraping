@@ -54,9 +54,11 @@ Fora do horário de aula ou monitoria:
 | [08-tjsp.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/08-tjsp.R)                   |
 | [09-glueup.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/09-glueup.R)               |
 | [10-wiki.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/10-wiki.R)                   |
+| [11-dejt.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/11-dejt.R)                   |
 | [13-pesqele.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/13-pesqele.R)             |
 | [14-pbi.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/14-pbi.R)                     |
 | [xx-exemplo-denis.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/xx-exemplo-denis.R) |
+| [xx-exemplo-leo.R](https://curso-r.github.io/202111-web-scraping/exemplos_de_aula/xx-exemplo-leo.R)     |
 
 ## Lição de casa
 
